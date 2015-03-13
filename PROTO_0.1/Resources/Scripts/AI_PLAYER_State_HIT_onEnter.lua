@@ -16,7 +16,7 @@ function AI_PLAYER.HIT_onEnter ( )
     object.setVisible (object.getChildAt ( this.getObject ( ),2 ),true )
     
     -- CHANGE COINS AND STOP INPUT
-    --user.sendEvent (  )
+    user.sendEvent ( hUser,"AI_MAIN","onLostCoins" )
     user.sendEvent ( hUser,"AI_INPUT","onChangeState",1 )
     
     sound.play (this.getObject ( ),0,1,true,1)
