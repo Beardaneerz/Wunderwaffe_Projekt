@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function AI_PLAYER.InitSound()
+
+
+sound.enableSpatialization(this.getObject(),true)
+
+
+
+end
