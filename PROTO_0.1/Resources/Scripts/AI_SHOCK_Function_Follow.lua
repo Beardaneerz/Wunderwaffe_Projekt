@@ -1,22 +1,17 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onInit
+--  Function......... : Follow
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_PLAYER.onInit (  )
+function AI_SHOCK.Follow ( )
 --------------------------------------------------------------------------------
-	
-    local hScene = application.getCurrentUserScene ( )
+	local hScene = application.getCurrentUserScene ( )
     
-	-- GET & SET PLAYER OBJECT
-    this.hCam( scene.getTaggedObject ( hScene,"CAM" ))
-    this.InitSound ( )
+    local pX,pY,pZ = object.getTranslation ( this.hPlane ( ),object.kGlobalSpace )
     
-    this.ON ( )
-    this.InitShield ( )
-    
+    object.setTranslation ( this.getObject ( ), pX,pY,pZ,object.kGlobalSpace )
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

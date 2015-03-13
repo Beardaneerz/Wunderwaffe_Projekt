@@ -34,7 +34,8 @@ then
 
 else
 
-
+this.Weapon_4()
+bOn=false
 
 end
 else
@@ -43,3 +44,4 @@ end
 
 
 end
+

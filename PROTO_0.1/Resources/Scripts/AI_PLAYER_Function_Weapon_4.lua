@@ -8,9 +8,8 @@
 function AI_PLAYER.Weapon_4 ( )
 --------------------------------------------------------------------------------
 	
-	--
-	-- Write your code here, using 'this' as current AI instance.
-	--
+ object.sendEvent ( this.hShield ( ),"AI_SHOCK","onLaunchShield",true )
+ log.warning ( "pass W4" )
 	
 --------------------------------------------------------------------------------
 end

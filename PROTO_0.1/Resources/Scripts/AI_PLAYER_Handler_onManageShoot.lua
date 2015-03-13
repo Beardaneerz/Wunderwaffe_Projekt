@@ -16,6 +16,11 @@ function AI_PLAYER.onManageShoot ( bValue )
     then
         object.sendEvent ( this.hStockLaser(),"AI_LASER","onStop" )
     end
+    
+    if(this.nActualWeapon ( )==3)
+    then
+        object.sendEvent ( this.hShield ( ),"AI_SHOCK","onStop" )
+    end
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

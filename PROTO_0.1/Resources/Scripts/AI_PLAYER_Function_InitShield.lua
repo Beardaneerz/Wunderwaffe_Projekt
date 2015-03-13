@@ -1,21 +1,22 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onInit
+--  Function......... : InitShield
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_PLAYER.onInit (  )
+function AI_PLAYER.InitShield ( )
 --------------------------------------------------------------------------------
-	
+
     local hScene = application.getCurrentUserScene ( )
     
-	-- GET & SET PLAYER OBJECT
-    this.hCam( scene.getTaggedObject ( hScene,"CAM" ))
-    this.InitSound ( )
+    this.hShield ( scene.createRuntimeObject ( hScene, "OBJ_SHOCKWAVE" ) )  
     
-    this.ON ( )
-    this.InitShield ( )
+    local pX,pY,pZ = object.getTranslation ( this.getObject ( ),object.kGlobalSpace)
+    
+    object.setTranslation (this.hShield( ),pX,pY,pZ,object.kGlobalSpace )
+    
+    object.sendEvent (  this.hShield ( ) ,"AI_SHOCK","onMyInit",this.getObject ( ) )
     
 --------------------------------------------------------------------------------
 end

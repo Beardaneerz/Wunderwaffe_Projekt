@@ -12,7 +12,7 @@ function AI_LASER.onStop (  )
     
 	scene.destroyRuntimeObject ( hScene, this.getObject ( ) )
     
-    log.warning ( "PASS DESTROY" )
+    
 	
 --------------------------------------------------------------------------------
 end

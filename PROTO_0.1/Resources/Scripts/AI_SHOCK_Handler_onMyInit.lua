@@ -1,22 +1,20 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onInit
+--  Handler.......... : onMyInit
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_PLAYER.onInit (  )
+function AI_SHOCK.onMyInit ( hParent )
 --------------------------------------------------------------------------------
 	
-    local hScene = application.getCurrentUserScene ( )
-    
-	-- GET & SET PLAYER OBJECT
-    this.hCam( scene.getTaggedObject ( hScene,"CAM" ))
-    this.InitSound ( )
-    
-    this.ON ( )
-    this.InitShield ( )
-    
+this.hPlane ( hParent)
+
+sensor.setActiveAt ( this.getObject ( ),0,false  )
+
+object.setScale ( this.getObject ( ),0.1,0.1,0.1 )
+
+	
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

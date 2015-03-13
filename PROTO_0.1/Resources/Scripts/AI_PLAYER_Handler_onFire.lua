@@ -34,7 +34,8 @@ function AI_PLAYER.onFire ( bOn )
             
         else
         
-           -- this.Weapon_4 ( )
+            this.Weapon_4 ( )
+              bOn = false 
             
         end
     else

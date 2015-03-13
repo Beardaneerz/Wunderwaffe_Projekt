@@ -1,22 +1,15 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onInit
+--  Function......... : ActiveShield
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_PLAYER.onInit (  )
+function AI_SHOCK.ActiveShield ( )
 --------------------------------------------------------------------------------
 	
-    local hScene = application.getCurrentUserScene ( )
-    
-	-- GET & SET PLAYER OBJECT
-    this.hCam( scene.getTaggedObject ( hScene,"CAM" ))
-    this.InitSound ( )
-    
-    this.ON ( )
-    this.InitShield ( )
-    
+	object.setScale ( this.getObject ( ),this.nScale ( ),this.nScale ( ),this.nScale ( ) )
+	
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

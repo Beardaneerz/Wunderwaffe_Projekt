@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_SHOCK.ActiveShield()
+
+
+object.setScale(this.getObject(),this.nScale(),this.nScale(),this.nScale())
+
+
+end

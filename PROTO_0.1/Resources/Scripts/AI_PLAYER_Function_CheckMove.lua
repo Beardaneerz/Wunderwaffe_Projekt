@@ -24,7 +24,7 @@ function AI_PLAYER.CheckMove ( nXx, nYy )
     then
         return true
     else
-        log.message ( nXx )
+      
         return false
     end
 

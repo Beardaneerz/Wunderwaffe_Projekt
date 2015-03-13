@@ -17,3 +17,4 @@ dynamics.addForce(this.getObject(),nX,nY,0,object.kGlobalSpace)
 
 
 end
+

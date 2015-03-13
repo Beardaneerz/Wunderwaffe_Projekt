@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_SHOCK.onSensorCollisionBegin(nSensorID,hTargetObject,nTargetSensorID)
+
+
+log.warning("touch")
+
+
+end

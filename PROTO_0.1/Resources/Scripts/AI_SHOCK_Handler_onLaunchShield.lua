@@ -1,22 +1,19 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onInit
+--  Handler.......... : onLaunchShield
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_PLAYER.onInit (  )
+function AI_SHOCK.onLaunchShield ( bActivate  )
 --------------------------------------------------------------------------------
 	
-    local hScene = application.getCurrentUserScene ( )
-    
-	-- GET & SET PLAYER OBJECT
-    this.hCam( scene.getTaggedObject ( hScene,"CAM" ))
-    this.InitSound ( )
-    
-    this.ON ( )
-    this.InitShield ( )
-    
+    this.bActive ( bActivate)
+    this.nWayFactor ( 1 )
+    this.nScale ( 0.1)
+    this.nIncrement ( 0.2)
+    log.warning ( "pass launch" )
+
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------
