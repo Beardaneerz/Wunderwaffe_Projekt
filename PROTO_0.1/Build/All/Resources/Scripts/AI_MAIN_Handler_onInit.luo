@@ -1,0 +1,37 @@
+
+
+
+
+
+
+
+function AI_MAIN.onInit()
+
+
+local hUser=application.getCurrentUser()
+
+
+user.setScene(hUser,"LVL_PROTOTYPE")
+local hScene=application.getCurrentUserScene()
+
+hud.newTemplateInstance(this.getUser(),"HUD_MAIN","MAIN")
+
+
+this.hCam(scene.getTaggedObject(hScene,"CAM"))
+user.setActiveCamera(hUser,this.hCam())
+
+
+user.sendEvent(this.getUser(),"AI_INPUT","onMyInit")
+
+
+music.play(hScene,1,5)
+music.setVolume(hScene,0.4,0)
+
+
+this.nLife(this.nLife()+3)
+
+
+this.PLAY()
+
+
+end

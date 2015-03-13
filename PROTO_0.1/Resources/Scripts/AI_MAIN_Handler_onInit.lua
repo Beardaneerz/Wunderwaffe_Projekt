@@ -27,6 +27,9 @@ function AI_MAIN.onInit (  )
     music.play ( hScene,1,5 )
     music.setVolume ( hScene,0.4,0 )
     
+    --Init Life for demo
+    this.nLife ( this.nLife ( ) + 3 )
+    
     -- INIT GAME
     this.PLAY ( )
 	

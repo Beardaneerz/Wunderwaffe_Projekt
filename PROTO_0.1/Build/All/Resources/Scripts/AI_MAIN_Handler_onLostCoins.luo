@@ -1,0 +1,22 @@
+
+
+
+
+
+
+
+function AI_MAIN.onLostCoins()
+
+
+local hUser=application.getCurrentUser()
+
+this.nLife(this.nLife()- 1)
+
+if(this.nLife()<0)
+then
+this.nCoins(this.nCoins()- 1)
+hud.setLabelText(hud.getComponent(hUser,"MAIN.COINS"),""..this.nCoins())
+end
+
+
+end

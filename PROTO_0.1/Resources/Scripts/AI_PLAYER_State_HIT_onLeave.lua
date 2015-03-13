@@ -22,6 +22,7 @@ function AI_PLAYER.HIT_onLeave ( )
     object.translateTo ( this.getObject ( ),nX-100,nYy,nZz,object.kGlobalSpace,0.1 )
     
     user.sendEvent ( hUser,"AI_INPUT","onChangeState",0 )
+
 	
 --------------------------------------------------------------------------------
 end
