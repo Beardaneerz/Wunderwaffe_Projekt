@@ -1,0 +1,22 @@
+
+
+
+
+
+
+
+function AI_INPUT.OFF_onLoop()
+
+
+local kType=this.KindInput()
+
+if(not this.bOff())
+then
+if(kType~=0)
+then
+this.ON()
+end
+end
+
+
+end

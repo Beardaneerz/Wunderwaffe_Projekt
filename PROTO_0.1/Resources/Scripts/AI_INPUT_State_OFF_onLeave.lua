@@ -8,9 +8,7 @@
 function AI_INPUT.OFF_onLeave ( )
 --------------------------------------------------------------------------------
 	
-	--
-	-- Write your code here, using 'this' as current AI instance.
-	--
+    this.bOff ( false )
 	
 --------------------------------------------------------------------------------
 end

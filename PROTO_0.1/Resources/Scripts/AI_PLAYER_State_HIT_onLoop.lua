@@ -14,7 +14,7 @@ function AI_PLAYER.HIT_onLoop ( )
     
     object.setUniformScale ( object.getChildAt ( this.getObject ( ),2 ),this.nTimer ( )*20 )
     
-    if (this.nTimer ( )>2)
+    if (this.nTimer ( )> 2 )
     then
         this.IDLE ( )
     end

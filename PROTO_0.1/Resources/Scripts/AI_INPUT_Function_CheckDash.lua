@@ -99,10 +99,10 @@ function AI_INPUT.CheckDash ( )
     end
     
 
-	if (nCountX >3) then log.message ("DASHX") end
-    if (nCountY >3) then log.message ("DASHY") end
-    if (nCountXx >3) then log.message ("DASHXx") end
-    if (nCountYy >3) then log.message ("DASHYy") end
+	if (nCountX >3) then object.sendEvent ( this.hPlayer ( ),"AI_PLAYER","onDash",1 ) end
+    if (nCountY >3) then object.sendEvent ( this.hPlayer ( ),"AI_PLAYER","onDash",2 ) end
+    if (nCountXx >3) then object.sendEvent ( this.hPlayer ( ),"AI_PLAYER","onDash",3 ) end
+    if (nCountYy >3) then object.sendEvent ( this.hPlayer ( ),"AI_PLAYER","onDash",4 ) end
     
 --------------------------------------------------------------------------------
 end
