@@ -10,7 +10,7 @@ function AI_BULLET.onMyInit ( nBulletSpeed )
 	
 	
 	this.nSpeed ( nBulletSpeed )
-    log.message ( this.nSpeed ( ) )
+  
     
 --------------------------------------------------------------------------------
 end
