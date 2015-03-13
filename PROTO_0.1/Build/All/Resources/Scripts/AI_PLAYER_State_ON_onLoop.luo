@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_PLAYER.ON_onLoop()
+
+
+object.setRotation(this.getObject(),0,0,0,object.kGlobalSpace)
+
+
+end

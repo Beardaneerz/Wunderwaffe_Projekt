@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function AI_INPUT.KindInput()
+
+
+local kType=input.getJoypadType(this.getUser(),0)
+
+return kType
+
+
+end

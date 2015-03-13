@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+function AI_INPUT.InitTable()
+
+
+
+for i=0,this.nSizeBuffer()
+do
+table.add(this.tFrameBufferX(),0)
+table.add(this.tFrameBufferY(),0)
+end
+
+
+end

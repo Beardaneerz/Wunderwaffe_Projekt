@@ -15,8 +15,9 @@ function AI_INPUT.onMyInit (  )
     -- INITIALIZE HUD FOR JOYPAD
     hud.newTemplateInstance ( this.getUser ( ),"HUD_INPUT","INPUT" )
     
-    -- INITIALIZE INPUT FOR MULTIPLE DRIVERS
+    -- INITIALIZE INPUT FOR MULTIPLE DRIVERS AND INIT FRAMEBUFFER
     this.InitInput ( )
+    this.InitTable ( )
     
     -- FOR NON-AXIS JOYPAD
     if ( this.nKindInput ( ) == 0 or 1 or 6 )
