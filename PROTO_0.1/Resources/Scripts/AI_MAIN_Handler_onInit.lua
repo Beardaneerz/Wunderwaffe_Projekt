@@ -29,6 +29,7 @@ function AI_MAIN.onInit (  )
     
     --Init Life for demo
     this.nLife ( this.nLife ( ) + 3 )
+    hud.setLabelText ( hud.getComponent ( hUser,"MAIN.COINS" ),""..this.nCoins ( ) )
     
     -- INIT GAME
     this.PLAY ( )

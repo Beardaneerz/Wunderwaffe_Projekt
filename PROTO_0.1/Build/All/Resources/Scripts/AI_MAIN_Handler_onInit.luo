@@ -29,6 +29,7 @@ music.setVolume(hScene,0.4,0)
 
 
 this.nLife(this.nLife()+3)
+hud.setLabelText(hud.getComponent(hUser,"MAIN.COINS"),""..this.nCoins())
 
 
 this.PLAY()
