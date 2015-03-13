@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+function AI_PLAYER.onChangeWeapon()
+
+
+local hUser=application.getCurrentUser()
+
+if(this.nActualWeapon()+1<4)
+then
+this.nActualWeapon(this.nActualWeapon()+1)
+else
+this.nActualWeapon(0)
+end
+
+this.CallActionHUD()
+
+
+end
