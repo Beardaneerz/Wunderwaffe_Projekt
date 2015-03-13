@@ -54,6 +54,7 @@ end
 if(nButton==2)
 then
 log.warning("BOMBE")
+object.sendEvent(this.hPlayer(),"AI_PLAYER","onLaunchBomb")
 end
 
 
@@ -69,3 +70,4 @@ end
 
 
 end
+

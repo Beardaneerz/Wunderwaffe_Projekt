@@ -54,7 +54,8 @@ function AI_INPUT.onJoypadButtonUp ( nJoypad, nButton )
     if ( nButton == 2 )
     then
         log.warning ( "BOMBE" )
-    end
+          object.sendEvent ( this.hPlayer ( ),"AI_PLAYER","onLaunchBomb" )
+            end
 	
  
 --------------------------------------------------------------------------------
