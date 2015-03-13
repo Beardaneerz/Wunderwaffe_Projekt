@@ -26,7 +26,7 @@ function AI_INPUT.onJoypadStickMove ( nJoypad, nStick, nAxisX, nAxisY )
             else
             table.setAt ( this.tAxisInput ( ),1,0 )
             end
-            
+        
         end
 	end
     

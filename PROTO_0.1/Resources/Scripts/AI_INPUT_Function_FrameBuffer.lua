@@ -1,18 +1,19 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onSensorCollisionBegin
+--  Function......... : FrameBuffer
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_SHOCK.onSensorCollisionBegin ( nSensorID, hTargetObject, nTargetSensorID )
+function AI_INPUT.FrameBuffer ( nX, nY )
 --------------------------------------------------------------------------------
 	
-<<<<<<< HEAD:PROTO_0.1/Resources/Scripts/AI_SHOCK_Handler_onSensorCollisionBegin.lua
-log.warning ( "touch" )
-=======
-    --log.message ( this.hStockLaser ( ) )
->>>>>>> origin/V-0.1:PROTO_0.1/Resources/Scripts/AI_PLAYER_Handler_onEnterFrame.lua
+    if (this.nFrameBufferIndex ( )> this.nSizeBuffer ( ))then this.nFrameBufferIndex ( 0 ) end 
+    
+    table.setAt ( this.tFrameBufferX ( ),this.nFrameBufferIndex ( ),nX )
+    table.setAt ( this.tFrameBufferY ( ),this.nFrameBufferIndex ( ),nY )
+    
+	this.nFrameBufferIndex ( this.nFrameBufferIndex ( ) + 1)
 	
 --------------------------------------------------------------------------------
 end

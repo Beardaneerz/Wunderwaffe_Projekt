@@ -1,0 +1,36 @@
+
+
+
+
+
+
+
+function AI_INPUT.InitMove()
+
+
+
+
+
+
+
+
+
+
+for i=0,3
+do
+table.add(this.tInput(),false)
+end
+
+
+
+
+
+
+
+for i=0,1
+do
+table.add(this.tAxisInput(),0)
+end
+
+
+end

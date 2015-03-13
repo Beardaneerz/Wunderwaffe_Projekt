@@ -1,18 +1,19 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onSensorCollisionBegin
+--  Function......... : InitTable
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_SHOCK.onSensorCollisionBegin ( nSensorID, hTargetObject, nTargetSensorID )
+function AI_INPUT.InitTable ( )
 --------------------------------------------------------------------------------
 	
-<<<<<<< HEAD:PROTO_0.1/Resources/Scripts/AI_SHOCK_Handler_onSensorCollisionBegin.lua
-log.warning ( "touch" )
-=======
-    --log.message ( this.hStockLaser ( ) )
->>>>>>> origin/V-0.1:PROTO_0.1/Resources/Scripts/AI_PLAYER_Handler_onEnterFrame.lua
+    -- FUNCTION INIT THE FRAMEBUFFER TABLE
+	for i = 0, this.nSizeBuffer ( )
+    do
+        table.add ( this.tFrameBufferX ( ),0)
+        table.add ( this.tFrameBufferY ( ),0)
+    end
 	
 --------------------------------------------------------------------------------
 end
