@@ -11,7 +11,7 @@ function AI_SHOCK.onEnterFrame()
 this.Follow()
 this.ActiveShield()
 
-log.warning(this.nScale())
+
 
 end
 
