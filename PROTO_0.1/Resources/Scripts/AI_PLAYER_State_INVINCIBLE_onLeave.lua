@@ -8,8 +8,9 @@
 function AI_PLAYER.INVINCIBLE_onLeave ( )
 --------------------------------------------------------------------------------
 	
-    this.nTimer ( 0 )
-	sensor.setActiveAt ( this.getObject ( ),0,true )
+	--
+	-- Write your code here, using 'this' as current AI instance.
+	--
 	
 --------------------------------------------------------------------------------
 end
