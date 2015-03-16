@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_MAIN.CONTINUE_onEnter()
+
+
+this.nTimer(9)
+
+
+end

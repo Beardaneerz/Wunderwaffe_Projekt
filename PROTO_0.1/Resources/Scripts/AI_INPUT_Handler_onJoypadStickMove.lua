@@ -12,7 +12,6 @@ function AI_INPUT.onJoypadStickMove ( nJoypad, nStick, nAxisX, nAxisY )
     then
         if (nStick == 0)
         then
-            
             if (nAxisX>0.15 or nAxisX<-0.15)
             then
             table.setAt ( this.tAxisInput ( ),0,nAxisX )
@@ -26,7 +25,6 @@ function AI_INPUT.onJoypadStickMove ( nJoypad, nStick, nAxisX, nAxisY )
             else
             table.setAt ( this.tAxisInput ( ),1,0 )
             end
-        
         end
 	end
     

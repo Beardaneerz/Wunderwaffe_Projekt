@@ -57,7 +57,6 @@ function AI_INPUT.onJoypadButtonUp ( nJoypad, nButton )
           object.sendEvent ( this.hPlayer ( ),"AI_PLAYER","onLaunchBomb" )
             end
 	
- 
 --------------------------------------------------------------------------------
 -- CHANGE WEAPON FOR XBOX 360
 -------------------------------------------------------------------------------- 
@@ -65,7 +64,15 @@ function AI_INPUT.onJoypadButtonUp ( nJoypad, nButton )
     if (nButton == 12)
     then
         log.warning ( "ADD COINS" )
-        user.sendEvent ( hUser,"AI_MAIN","onAddCoins" )
+        
+        local sState = user.getAIState ( hUser,"AI_MAIN" )
+        
+        if ( sState == "IDLE" or sState == "PLAY" )
+        then
+            user.sendEvent ( hUser,"AI_MAIN","onAddCoins" )
+        else
+            user.sendEvent ( hUser,"AI_MAIN","onContinue" )
+        end
     end
     
 --------------------------------------------------------------------------------

@@ -21,7 +21,8 @@ function AI_MAIN.onLostCoins (  )
         then
             hud.callAction ( hUser,"MAIN.GAME_OVER_ON" )
         else
-            this.nLife ( 3 )
+            this.CONTINUE ( )
+            hud.callAction ( hUser,"MAIN.CONTINUE_ON" )
         end
     end
 	

@@ -61,10 +61,18 @@ function AI_INPUT.onKeyboardKeyUp ( kKeyCode )
 -- CHANGE WEAPON FOR XBOX 360
 -------------------------------------------------------------------------------- 
     
-    if ( kKeyCode == 66)
+    if (kKeyCode == 66)
     then
         log.warning ( "ADD COINS" )
-        user.sendEvent ( hUser,"AI_MAIN","onAddCoins" )
+        
+        local sState = user.getAIState ( hUser,"AI_MAIN" )
+        
+        if ( sState == "IDLE" or sState == "PLAY" )
+        then
+            user.sendEvent ( hUser,"AI_MAIN","onAddCoins" )
+        else
+            user.sendEvent ( hUser,"AI_MAIN","onContinue" )
+        end
     end
 	
 --------------------------------------------------------------------------------

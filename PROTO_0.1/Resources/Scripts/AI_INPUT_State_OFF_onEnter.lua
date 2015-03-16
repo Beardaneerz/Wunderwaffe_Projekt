@@ -10,8 +10,6 @@ function AI_INPUT.OFF_onEnter ( )
 	
     local hUser = application.getCurrentUser ( )
 	log.warning ( "MODE_OFF" )
-    
-    user.sendEvent ( hUser,"AI_MAIN","onChangeState",0 )
 	
 --------------------------------------------------------------------------------
 end

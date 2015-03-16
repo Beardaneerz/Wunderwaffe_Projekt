@@ -64,7 +64,15 @@ end
 if(kKeyCode==66)
 then
 log.warning("ADD COINS")
+
+local sState=user.getAIState(hUser,"AI_MAIN")
+
+if(sState=="IDLE"or sState=="PLAY")
+then
 user.sendEvent(hUser,"AI_MAIN","onAddCoins")
+else
+user.sendEvent(hUser,"AI_MAIN","onContinue")
+end
 end
 
 

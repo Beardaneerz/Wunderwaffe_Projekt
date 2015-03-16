@@ -11,7 +11,5 @@ function AI_INPUT.ON_onEnter()
 local hUser=application.getCurrentUser()
 log.warning("MODE_ON")
 
-user.sendEvent(hUser,"AI_MAIN","onChangeState",1)
-
 
 end
