@@ -5,21 +5,14 @@
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_PLAYER.onSensorCollisionBegin ( nSensorID, hTargetObject, nTargetSensorID )
+function AI_BULLET.onSensorCollisionBegin ( nSensorID, hTargetObject, nTargetSensorID )
 --------------------------------------------------------------------------------
+	  local hScene = application.getCurrentUserScene ( )
+      if( nTargetSensorID == 66 )
+      then
+        scene.destroyRuntimeObject ( hScene, this.getObject ( ) )
+      end
 	
-	if ( nSensorID == 1 and nTargetSensorID == 66 )
-    then
-    
-        this.HIT (  )
-    
-    end
-		if ( nSensorID == 1 and nTargetSensorID == 100 )
-    then
-    
-        this.HIT (  )
-    
-    end
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

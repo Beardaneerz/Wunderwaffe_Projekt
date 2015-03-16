@@ -32,7 +32,7 @@ function AI_BULLET.Delete ( )
     if(bX > xMax or bX < xMin or bY < yMax or bY > yMin )
     then 
    
-    scene.destroyRuntimeObject ( hScene, this.getObject ( ) )
+        scene.destroyRuntimeObject ( hScene, this.getObject ( ) )
     end
 	
 --------------------------------------------------------------------------------
