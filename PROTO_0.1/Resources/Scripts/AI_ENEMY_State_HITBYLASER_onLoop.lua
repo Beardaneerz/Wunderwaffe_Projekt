@@ -1,21 +1,25 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onSensorCollisionBegin
+--  State............ : HITBYLASER
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_ENEMY.onSensorCollisionBegin ( nSensorID, hTargetObject, nTargetSensorID )
+function AI_ENEMY.HITBYLASER_onLoop ( )
 --------------------------------------------------------------------------------
 	
-	if(nTargetSensorID == 67)
+
+    local dt = application.getLastFrameTime ( )
+    
+    this.nTimer ( this.nTimer ( )+ dt)
+    
+    if(this.nTimer ( ) >= 0.25)
     then 
-        this.nPV ( this.nPV ( ) -1)
-        this.Destroyer (  )
-    elseif(nTargetSensorID == 68)
-    then
-        this.HITBYLASER ( )
-        log.message ( "touched by laser" )
+        this.nTimer ( 0)
+        log.message ( "Hitted" )
+        log.message ( this.nPV ( ))
+        this.nPV ( this.nPV ( )-0.5)
+        this.Destroyer ( )
     end
     
 --------------------------------------------------------------------------------

@@ -1,23 +1,17 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onSensorCollisionBegin
+--  State............ : IDLE
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_ENEMY.onSensorCollisionBegin ( nSensorID, hTargetObject, nTargetSensorID )
+function AI_ENEMY.IDLE_onLeave ( )
 --------------------------------------------------------------------------------
 	
-	if(nTargetSensorID == 67)
-    then 
-        this.nPV ( this.nPV ( ) -1)
-        this.Destroyer (  )
-    elseif(nTargetSensorID == 68)
-    then
-        this.HITBYLASER ( )
-        log.message ( "touched by laser" )
-    end
-    
+	--
+	-- Write your code here, using 'this' as current AI instance.
+	--
+	
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------
