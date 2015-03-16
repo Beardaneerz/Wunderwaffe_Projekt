@@ -33,7 +33,6 @@ function AI_ENEMYBULLET.Destroyer ( )
     if(bX > xMax or bX < xMin or bY < yMax or bY > yMin )
     then 
         scene.destroyRuntimeObject ( hScene, this.getObject ( ) )
-        log.message ( "destroy" )
     end
 	
 --------------------------------------------------------------------------------

@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_SCORE.onInit()
+
+
+this.ON()
+
+
+end

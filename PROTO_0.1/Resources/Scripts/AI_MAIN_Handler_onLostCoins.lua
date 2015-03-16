@@ -23,6 +23,8 @@ function AI_MAIN.onLostCoins (  )
         else
             this.CONTINUE ( )
             hud.callAction ( hUser,"MAIN.CONTINUE_ON" )
+            
+            user.sendEvent (hUser,"AI_SCORE","onResetScore")
         end
     end
 	
