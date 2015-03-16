@@ -33,7 +33,9 @@ local bX,bY,notUsed3=object.getTranslation(this.getObject(),object.kGlobalSpace)
 if(bX>xMax or bX<xMin or bY<yMax or bY>yMin)
 then
 scene.destroyRuntimeObject(hScene,this.getObject())
+log.message("destroy")
 end
 
 
 end
+

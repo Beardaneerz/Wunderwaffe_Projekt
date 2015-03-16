@@ -8,7 +8,13 @@
 function AI_ENEMY.Destroyer ( )
 --------------------------------------------------------------------------------
 	
-	
+	if(this.nPV ( ) <0 )
+    then
+        object.setVisible ( this.getObject ( ),false )
+        sensor.setActiveAt(this.getObject ( ),0,false )
+        this.nPatternType ( 0) 
+       
+    end
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

@@ -8,7 +8,7 @@
 function AI_ENEMY.onInit (  )
 --------------------------------------------------------------------------------
 	
-	this.SetParameters ( 30,0.8,3,1)
+	this.SetParameters ( 10,1.5,5,1)
     object.sendEvent ( this.getObject ( ),"AI_ENEMY","onPatternManager" )
 	
 --------------------------------------------------------------------------------

@@ -11,9 +11,9 @@ function AI_DEBUG.onEnterFrame (  )
     -- 40 SECS POUR TRAVERSER UN ECRAN
     
 	local dt = application.getLastFrameTime ( )
-    this.nTime ( this.nTime ( ) + dt )
-    
-    hud.setLabelText ( hud.getComponent ( this.getUser ( ),"DEBUG.DEBUG" ),"TIME : "..this.nTime ( ) )
+    --this.nTime ( this.nTime ( ) + dt )
+    local Fps = 1/dt
+    hud.setLabelText ( hud.getComponent ( this.getUser ( ),"DEBUG.DEBUG" ),"FPS : "..Fps )
 	
 --------------------------------------------------------------------------------
 end
