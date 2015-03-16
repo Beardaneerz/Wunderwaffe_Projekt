@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_SCORE.onResetScore()
+
+
+this.nScore(0)
+
+
+end

@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_SCORE.onAddScore(nValue)
+
+
+this.nScore(this.nScore()+nValue)
+
+
+end

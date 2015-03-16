@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+function AI_ENEMY.SetParameters(nBCount,nDelay,nBSpeed,nPattern)
+
+
+this.nBulletsCount(nBCount)
+this.nCadence(nDelay)
+this.nSpeed(nBSpeed)
+this.nPatternType(nPattern)
+
+
+end
+
