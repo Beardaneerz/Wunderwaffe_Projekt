@@ -14,7 +14,9 @@ function AI_MAIN.onInit (  )
     user.setScene ( hUser,"LVL_PROTOTYPE" )
     local hScene = application.getCurrentUserScene ( )
     
+    --INIT MAIN HUD 
     hud.newTemplateInstance ( this.getUser ( ),"HUD_MAIN","MAIN" )
+    hud.setComponentOpacity ( hud.getComponent ( hUser,"MAIN.Container_2" ),0 )
     
     -- GET THE MAIN CAMERA OF THE GAME
     this.hCam ( scene.getTaggedObject ( hScene,"CAM" ))
@@ -28,7 +30,6 @@ function AI_MAIN.onInit (  )
     music.setVolume ( hScene,0.4,0 )
     
     --Init Life for demo
-    this.nLife ( this.nLife ( ) + 3 )
     hud.setLabelText ( hud.getComponent ( hUser,"MAIN.COINS" ),""..this.nCoins ( ) )
     
     -- INIT GAME
