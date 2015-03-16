@@ -8,9 +8,7 @@
 function AI_PLAYER.INVINCIBLE_onEnter ( )
 --------------------------------------------------------------------------------
 	
-	--
-	-- Write your code here, using 'this' as current AI instance.
-	--
+	sensor.setActiveAt ( this.getObject ( ),0,false )
 	
 --------------------------------------------------------------------------------
 end

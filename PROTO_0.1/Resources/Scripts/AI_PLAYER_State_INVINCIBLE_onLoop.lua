@@ -8,9 +8,14 @@
 function AI_PLAYER.INVINCIBLE_onLoop ( )
 --------------------------------------------------------------------------------
 	
-	--
-	-- Write your code here, using 'this' as current AI instance.
-	--
+    local dt = application.getLastFrameTime ( )
+    
+	this.nTimer ( this.nTimer ( ) + dt )
+    
+    if (this.nTimer ( )>=1)
+    then
+        this.ON ( )
+    end
 	
 --------------------------------------------------------------------------------
 end
