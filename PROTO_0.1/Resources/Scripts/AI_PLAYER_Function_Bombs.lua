@@ -12,6 +12,7 @@ function AI_PLAYER.Bombs ( )
     then
         local hScene = application.getCurrentUserScene ( )
         local pX,pY , pZ = object.getTranslation ( this.getObject ( ),object.kGlobalSpace )
+        
         local hBomb = scene.createRuntimeObject ( hScene,"OBJ_BOMB" )
         object.setTranslation ( hBomb,pX,pY,pZ,object.kGlobalSpace )
         this.nBombCount ( this.nBombCount ( )-1)

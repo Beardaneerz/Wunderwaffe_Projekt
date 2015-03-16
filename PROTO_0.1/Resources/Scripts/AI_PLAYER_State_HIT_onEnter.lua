@@ -12,7 +12,7 @@ function AI_PLAYER.HIT_onEnter ( )
     
     sfx.startParticleEmitterAt ( object.getChildAt ( this.getObject ( ),1 ),0 )
     
-    object.setVisible (object.getChildAt ( this.getObject ( ),0 ),false )
+    object.setVisible (object.getChildAt ( this.getObject ( ),3 ),false )
     object.setVisible (object.getChildAt ( this.getObject ( ),2 ),true )
     
     -- CHANGE COINS AND STOP INPUT
