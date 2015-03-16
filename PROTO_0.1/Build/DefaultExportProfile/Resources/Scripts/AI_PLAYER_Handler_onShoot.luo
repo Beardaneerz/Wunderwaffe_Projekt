@@ -8,15 +8,22 @@
 function AI_PLAYER.onShoot(nType)
 
 
-
 if(nType==1)
 then
-if(this.bShoot())
+if(this.nBulletCounter()<=5)
 then
 object.postEvent(this.getObject(),this.nCadence(),"AI_PLAYER","onShoot",nType)
+this.nBulletCounter(this.nBulletCounter()+1)
 this.Weapon_1()
+
+else
+
+
+this.nBulletCounter(0)
 end
 end
+
+
 
 if(nType==2)
 then

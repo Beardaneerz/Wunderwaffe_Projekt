@@ -19,7 +19,7 @@ function AI_PLAYER.onManageShoot ( bValue )
     
     if(this.nActualWeapon ( )==3)
     then
-        object.sendEvent ( this.hShield ( ),"AI_SHOCK","onStop" )
+       -- object.sendEvent ( this.hShield ( ),"AI_SHOCK","onStop" )
     end
 --------------------------------------------------------------------------------
 end

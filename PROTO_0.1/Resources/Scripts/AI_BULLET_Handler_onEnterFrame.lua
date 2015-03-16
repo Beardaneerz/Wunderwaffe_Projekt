@@ -11,6 +11,7 @@ function AI_BULLET.onEnterFrame (  )
     
     object.translate (this.getObject ( ),this.nSpeed ( )*dt,0,0,object.kGlobalSpace )
 	
+    this.Delete ( )
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------
