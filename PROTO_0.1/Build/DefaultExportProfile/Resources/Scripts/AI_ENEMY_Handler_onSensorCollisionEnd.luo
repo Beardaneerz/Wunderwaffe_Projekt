@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+function AI_ENEMY.onSensorCollisionEnd(nSensorID,hTargetObject,nTargetSensorID)
+
+
+if(nTargetSensorID==68)
+then
+this.IDLE()
+end
+
+
+end
