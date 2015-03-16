@@ -8,6 +8,7 @@
 function AI_MAIN.onAddCoins (  )
 --------------------------------------------------------------------------------
 	
+    --test
     local hUser = application.getCurrentUser ( )
      
 	this.nCoins ( this.nCoins ( )+1)
