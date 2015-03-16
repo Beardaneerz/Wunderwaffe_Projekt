@@ -14,7 +14,7 @@ function AI_PLAYER.HIT_onLeave ( )
     
     sfx.stopParticleEmitterAt ( object.getChildAt ( this.getObject ( ),1 ),0 )
     sound.stop ( this.getObject ( ),0 )
-	object.setVisible ( object.getChildAt(this.getObject ( ),0),true )
+	object.setVisible ( object.getChildAt(this.getObject ( ),3),true )
     
     -- TRANSFORM POSITION OF AVATAR
     local nX,nY,nZ = object.getTranslation ( this.hCam( ),object.kGlobalSpace )
