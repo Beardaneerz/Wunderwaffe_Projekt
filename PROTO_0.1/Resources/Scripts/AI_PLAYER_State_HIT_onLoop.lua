@@ -16,7 +16,7 @@ function AI_PLAYER.HIT_onLoop ( )
     
     if (this.nTimer ( )> 2 )
     then
-        this.IDLE ( )
+        this.INVINCIBLE ( )
     end
 	
 --------------------------------------------------------------------------------
