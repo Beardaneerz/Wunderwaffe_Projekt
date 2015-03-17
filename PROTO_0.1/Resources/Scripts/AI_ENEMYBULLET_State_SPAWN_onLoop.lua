@@ -8,9 +8,11 @@
 function AI_ENEMYBULLET.SPAWN_onLoop ( )
 --------------------------------------------------------------------------------
 	
-	--
-	-- Write your code here, using 'this' as current AI instance.
-	--
+    local dt = application.getAverageFrameTime ( )
+    
+    this.Destroyer ( )
+    
+    object.translate ( this.getObject ( ),this.nSpeed ( )*dt,0,0,object.kLocalSpace )
 	
 --------------------------------------------------------------------------------
 end

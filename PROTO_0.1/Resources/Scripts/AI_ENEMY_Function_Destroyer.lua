@@ -16,7 +16,6 @@ function AI_ENEMY.Destroyer ( )
         
         object.setTranslation ( this.getObject ( ),2000,2000,-2000,object.kGlobalSpace )
         this.IDLE ( )
-       
     end
     
 --------------------------------------------------------------------------------
