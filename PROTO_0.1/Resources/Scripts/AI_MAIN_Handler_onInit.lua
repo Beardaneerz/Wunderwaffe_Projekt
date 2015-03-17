@@ -26,7 +26,7 @@ function AI_MAIN.onInit (  )
     user.sendEvent ( this.getUser ( ),"AI_INPUT","onMyInit" )
     
     -- MUSIC MANAGER
-    music.play ( hScene,1,5 )
+    music.play ( hScene,2,5 )
     music.setVolume ( hScene,0.4,0 )
     
     --Init Life for demo

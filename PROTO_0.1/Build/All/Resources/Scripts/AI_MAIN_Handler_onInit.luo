@@ -26,7 +26,7 @@ user.setActiveCamera(hUser,this.hCam())
 user.sendEvent(this.getUser(),"AI_INPUT","onMyInit")
 
 
-music.play(hScene,1,5)
+music.play(hScene,2,5)
 music.setVolume(hScene,0.4,0)
 
 
