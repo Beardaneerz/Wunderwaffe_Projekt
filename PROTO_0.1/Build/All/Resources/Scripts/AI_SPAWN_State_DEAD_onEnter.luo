@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function AI_SPAWN.DEAD_onEnter()
+
+
+log.message("TEST")
+object.sendEvent(this.hEnnemy(),"AI_ENEMY","onTakeDamage")
+this.hEnnemy(nil)
+
+
+end

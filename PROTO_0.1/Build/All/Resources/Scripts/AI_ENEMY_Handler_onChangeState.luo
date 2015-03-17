@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_ENEMY.onChangeState()
+
+
+this.SPAWN()
+
+
+end

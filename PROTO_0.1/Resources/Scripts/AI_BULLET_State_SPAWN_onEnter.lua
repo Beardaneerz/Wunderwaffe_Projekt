@@ -1,18 +1,16 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onPatternManager
+--  State............ : SPAWN
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_ENEMY.onPatternManager (  )
+function AI_BULLET.SPAWN_onEnter ( )
 --------------------------------------------------------------------------------
 	
-	if(this.nPatternType ( ) == 1)
-    then
-        object.postEvent ( this.getObject ( ),this.nCadence ( ),"AI_ENEMY","onPatternManager" )
-        this.Pattern1 ( )
-    end
+	--
+	-- Write your code here, using 'this' as current AI instance.
+	--
 	
 --------------------------------------------------------------------------------
 end

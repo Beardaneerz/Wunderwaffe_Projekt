@@ -13,21 +13,12 @@
 function AI_ENEMY.Pattern1 ( )
 --------------------------------------------------------------------------------
 	
-    local nAngle = 360/this.nBulletsCount ( )
-    
+    local hUser = application.getCurrentUser ( )
     
 	for i=0,this.nBulletsCount ( )
     do
-        local hUser = application.getCurrentUser ( )
-        local hScene = application.getCurrentUserScene ( )
 
-        local hEBullet = scene.createRuntimeObject (hScene, "OBJ_E_BULLET"  )
-        local nPX,nPY,nPZ = object.getTranslation ( this.getObject ( ),object.kGlobalSpace )
-        
-        object.setTranslation ( hEBullet,nPX,nPY,nPZ,object.kGlobalSpace )
-
-        object.sendEvent ( hEBullet,"AI_ENEMYBULLET", "onMyInit", this.nSpeed ( ),this.getObject ( )  )
-        object.setRotation ( hEBullet,0,0,nAngle*i,object.kLocalSpace  )
+        user.sendEvent ( hUser,"AI_ENNEMY_MANAGER","onLoadBullet",this.getObject ( ),i )
                 
     end
 	

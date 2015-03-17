@@ -10,6 +10,8 @@ function AI_ENEMYBULLET.onMyInit ( nBSpeed , hEnemy )
 	
     this.nSpeed ( nBSpeed )
     this.hParent ( hEnemy )
+    
+    this.SPAWN ( )
 
 --------------------------------------------------------------------------------
 end

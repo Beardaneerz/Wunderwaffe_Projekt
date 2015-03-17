@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_ENEMY.onTakeDamage()
+
+
+this.nPV(-100)
+this.Destroyer()
+
+end

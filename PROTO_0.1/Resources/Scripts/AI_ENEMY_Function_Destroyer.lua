@@ -12,13 +12,13 @@ function AI_ENEMY.Destroyer ( )
 
 	if(this.nPV ( ) <0 )
     then
-        object.setVisible ( this.getObject ( ),false )
-        sensor.setActiveAt(this.getObject ( ),0,false )
-        this.nPatternType ( 0 ) 
-        
         user.sendEvent ( hUser,"AI_SCORE","onAddScore",this.nScore ( ) )
+        
+        object.setTranslation ( this.getObject ( ),2000,2000,-2000,object.kGlobalSpace )
+        this.IDLE ( )
        
     end
+    
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

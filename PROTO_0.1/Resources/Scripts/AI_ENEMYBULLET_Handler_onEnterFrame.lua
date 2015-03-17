@@ -9,7 +9,7 @@ function AI_ENEMYBULLET.onEnterFrame (  )
 --------------------------------------------------------------------------------
     local dt = application.getAverageFrameTime ( )
     
-    this.Destroyer ( )
+    --this.Destroyer ( )
     
     object.translate ( this.getObject ( ),this.nSpeed ( )*dt,0,0,object.kLocalSpace )
     
