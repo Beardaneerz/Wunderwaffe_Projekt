@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_TESLA.onMyInit(hParent,nTSpeed)
+
+
+this.hPlane(hParent)
+this.nSpeed(nTSpeed)
+
+end

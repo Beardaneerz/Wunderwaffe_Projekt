@@ -1,25 +1,15 @@
 --------------------------------------------------------------------------------
---  Function......... : Weapon_3
+--  Handler.......... : onMyInit
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_PLAYER.Weapon_3 ( )
+function AI_TESLA.onMyInit ( hParent , nTSpeed )
 --------------------------------------------------------------------------------
 	
-	
-    local hScene = application.getCurrentUserScene ( )
-    
-    local hTesla = scene.createRuntimeObject ( hScene, "OBJ_TESLA" ) 
-    
-    local pX,pY,pZ = object.getTranslation ( this.getObject ( ),object.kGlobalSpace)
-    
-    object.setTranslation ( hTesla,pX,pY,pZ,object.kGlobalSpace )
-    object.sendEvent ( hTesla,"AI_TESLA","onMyInit", this.getObject ( ),this.nTeslaSpeed ( )) 
-    
-    
-	
+	this.hPlane ( hParent )
+    this.nSpeed ( nTSpeed )
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

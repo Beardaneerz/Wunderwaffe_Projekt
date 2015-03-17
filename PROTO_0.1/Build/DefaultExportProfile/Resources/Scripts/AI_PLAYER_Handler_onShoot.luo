@@ -36,5 +36,16 @@ end
 end
 
 
+if(nType==3)
+then
+if(this.bShoot())
+then
+this.Weapon_3()
+else
+
+end
+end
+
+
 end
 

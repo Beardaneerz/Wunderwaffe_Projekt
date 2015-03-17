@@ -30,7 +30,9 @@ function AI_PLAYER.onFire ( bOn )
         elseif (this.nActualWeapon ( ) == 2)
         then
         
-           --// this.Weapon_3 ( )
+            bOn = false 
+            object.sendEvent ( this.getObject ( ),"AI_PLAYER","onShoot",3)
+            
             
         else
         

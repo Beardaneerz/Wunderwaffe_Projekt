@@ -1,24 +1,16 @@
 --------------------------------------------------------------------------------
---  Function......... : Weapon_3
+--  Handler.......... : onEnterFrame
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_PLAYER.Weapon_3 ( )
+function AI_TESLA.onEnterFrame (  )
 --------------------------------------------------------------------------------
 	
-	
-    local hScene = application.getCurrentUserScene ( )
+    local dt = application.getAverageFrameTime ( )
     
-    local hTesla = scene.createRuntimeObject ( hScene, "OBJ_TESLA" ) 
-    
-    local pX,pY,pZ = object.getTranslation ( this.getObject ( ),object.kGlobalSpace)
-    
-    object.setTranslation ( hTesla,pX,pY,pZ,object.kGlobalSpace )
-    object.sendEvent ( hTesla,"AI_TESLA","onMyInit", this.getObject ( ),this.nTeslaSpeed ( )) 
-    
-    
+	object.translate ( this.getObject ( ),this.nSpeed ( )*dt,0,0,object.kLocalSpace )
 	
 --------------------------------------------------------------------------------
 end

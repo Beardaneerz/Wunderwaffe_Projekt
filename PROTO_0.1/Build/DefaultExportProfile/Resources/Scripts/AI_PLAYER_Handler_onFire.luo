@@ -30,6 +30,8 @@ object.sendEvent(this.getObject(),"AI_PLAYER","onShoot",2)
 elseif(this.nActualWeapon()==2)
 then
 
+bOn=false
+object.sendEvent(this.getObject(),"AI_PLAYER","onShoot",3)
 
 
 else
