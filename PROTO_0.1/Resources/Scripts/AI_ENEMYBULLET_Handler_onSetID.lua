@@ -1,19 +1,14 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onEnterFrame
+--  Handler.......... : onSetID
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_DEBUG.onEnterFrame (  )
+function AI_ENEMYBULLET.onSetID ( nID )
 --------------------------------------------------------------------------------
 	
-local dt=application.getLastFrameTime()
-this.nTime(this.nTime()+dt)
-local nFps=math.floor(1/dt)
-
-hud.setLabelText(hud.getComponent(this.getUser(),"DEBUG.DEBUG"),"FPS : "..nFps)
-
+	this.nIndex ( nID )
 	
 --------------------------------------------------------------------------------
 end

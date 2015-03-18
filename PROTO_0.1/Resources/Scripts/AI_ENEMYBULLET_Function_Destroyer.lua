@@ -7,7 +7,8 @@
 --------------------------------------------------------------------------------
 function AI_ENEMYBULLET.Destroyer ( )
 --------------------------------------------------------------------------------
-	 
+    
+    local hUser = application.getCurrentUser ( )
     local hScene = application.getCurrentUserScene ( )
     
 	-- GET & SET PLAYER OBJECT 
@@ -33,6 +34,8 @@ function AI_ENEMYBULLET.Destroyer ( )
     if(bX > xMax or bX < xMin or bY < yMax or bY > yMin )
     then 
         this.IDLE ( )
+        object.setTranslation ( this.getObject ( ),2000,2000,-2000,object.kGlobalSpace )
+        user.sendEvent ( hUser,"AI_ENNEMY_MANAGER","onChangeState",this.nIndex ( ) )
     end
 	
 --------------------------------------------------------------------------------

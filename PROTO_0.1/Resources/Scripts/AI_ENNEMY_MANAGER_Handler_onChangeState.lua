@@ -1,19 +1,14 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onEnterFrame
+--  Handler.......... : onChangeState
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_DEBUG.onEnterFrame (  )
+function AI_ENNEMY_MANAGER.onChangeState ( nID )
 --------------------------------------------------------------------------------
 	
-local dt=application.getLastFrameTime()
-this.nTime(this.nTime()+dt)
-local nFps=math.floor(1/dt)
-
-hud.setLabelText(hud.getComponent(this.getUser(),"DEBUG.DEBUG"),"FPS : "..nFps)
-
+	table.setAt ( this.tBulletBool ( ),nID,false )
 	
 --------------------------------------------------------------------------------
 end

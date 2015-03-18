@@ -24,6 +24,9 @@ function AI_ENNEMY_MANAGER.onInit (  )
         hObject = scene.createRuntimeObject ( hScene, "OBJ_E_BULLET" )
         object.setTranslation ( hObject,2000,2000,-2000,object.kGlobalSpace )
         
+        object.sendEvent ( hObject,"AI_ENEMYBULLET","onSetID",i )
+        
+        table.add ( this.tBulletBool ( ), false )
         table.add ( this.tBullet ( ), hObject )
 	end
     
