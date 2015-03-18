@@ -15,7 +15,9 @@ function AI_ENNEMY_MANAGER.onInit (  )
     do
         hObject = scene.createRuntimeObject ( hScene, "OBJ_ENNEMY" )
         object.setTranslation ( hObject,2000,2000,-2000,object.kGlobalSpace )
+        object.sendEvent ( hObject,"AI_ENEMY","onSetID",i )
         
+        table.add ( this.tEnnemyBool ( ), false )
         table.add ( this.tEnnemy ( ), hObject )
 	end
     

@@ -27,7 +27,6 @@ end
 end
 
 table.setAt(this.tBulletBool(),nIndex,true)
-
 object.sendEvent(hObject,"AI_ENEMY","onCreateBullet",hSendObject,nAngle)
 
 
