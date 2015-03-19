@@ -12,7 +12,7 @@ local dt=application.getLastFrameTime()
 this.nTime(this.nTime()+dt)
 local nFps=math.floor(1/dt)
 
-hud.setLabelText(hud.getComponent(this.getUser(),"DEBUG.DEBUG"),"FPS : "..nFps)
+hud.setLabelText(hud.getComponent(this.getUser(),"DEBUG.DEBUG"),"FPS : "..this.nTime())
 
 
 

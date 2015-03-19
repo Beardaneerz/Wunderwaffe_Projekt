@@ -28,7 +28,7 @@ function AI_ENNEMY_MANAGER.onLoadBullet ( hObject, nAngle )
     
     table.setAt ( this.tBulletBool ( ),nIndex,true )
     object.sendEvent ( hObject ,"AI_ENEMY","onCreateBullet",hSendObject, nAngle )
-	
+
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

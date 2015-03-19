@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+function AI_ENEMY.HIT_onLoop()
+
+
+local dt=application.getLastFrameTime()
+
+this.nTimer(this.nTimer()+dt)
+
+object.setUniformScale(object.getChildAt(this.getObject(),1),this.nTimer()*20)
+
+if(this.nTimer()>2)
+then
+this.nTimer(0)
+this.IDLE()
+end
+
+end

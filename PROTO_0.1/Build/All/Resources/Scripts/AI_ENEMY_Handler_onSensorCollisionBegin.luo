@@ -12,6 +12,10 @@ if(nTargetSensorID==67)
 then
 this.nPV(this.nPV()-1)
 this.Destroyer()
+elseif(nTargetSensorID==68)
+then
+this.HITBYLASER()
+log.message("touched by laser")
 end
 
 

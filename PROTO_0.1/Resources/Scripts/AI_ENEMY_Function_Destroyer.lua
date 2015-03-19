@@ -12,11 +12,9 @@ function AI_ENEMY.Destroyer ( )
 
 	if(this.nPV ( ) <=0 )
     then
-        user.sendEvent ( hUser,"AI_SCORE","onAddScore",this.nScore ( ) )
-        
-        object.setTranslation ( this.getObject ( ),2000,2000,-2000,object.kGlobalSpace )
-        this.IDLE ( )
+        this.HIT ( )
     end
+    
     
 --------------------------------------------------------------------------------
 end

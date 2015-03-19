@@ -31,3 +31,4 @@ object.sendEvent(hObject,"AI_ENEMY","onCreateBullet",hSendObject,nAngle)
 
 
 end
+

@@ -15,6 +15,13 @@ this.hCam(scene.getTaggedObject(hScene,"CAM"))
 this.InitSound()
 
 this.ON()
+this.InitShield()
+
+for i=0,2
+do
+table.add(this.tRotate(),false)
+end
 
 
 end
+

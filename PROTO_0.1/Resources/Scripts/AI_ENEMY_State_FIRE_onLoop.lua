@@ -14,8 +14,17 @@ function AI_ENEMY.FIRE_onLoop ( )
     
     if ( this.nTimer ( )>= this.nCadence ( ))
     then
-        this.Pattern1 ( )
+        if(this.nPatternType ( )==1)
+        then
+            this.Pattern1 ( )
+        
+        elseif(this.nPatternType ( )==2)
+        then
+            this.Pattern2 ( )
+        end
+        
         this.nTimer ( 0 )
+        
     end
 	
 --------------------------------------------------------------------------------

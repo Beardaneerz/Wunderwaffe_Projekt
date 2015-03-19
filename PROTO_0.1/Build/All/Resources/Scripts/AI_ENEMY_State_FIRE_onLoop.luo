@@ -14,9 +14,19 @@ this.nTimer(this.nTimer()+dt)
 
 if(this.nTimer()>=this.nCadence())
 then
+if(this.nPatternType()==1)
+then
 this.Pattern1()
+
+elseif(this.nPatternType()==2)
+then
+this.Pattern2()
+end
+
 this.nTimer(0)
+
 end
 
 
 end
+
