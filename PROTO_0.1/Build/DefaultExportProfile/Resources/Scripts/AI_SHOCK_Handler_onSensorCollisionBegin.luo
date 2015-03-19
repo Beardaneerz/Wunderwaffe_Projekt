@@ -8,7 +8,16 @@
 function AI_SHOCK.onSensorCollisionBegin(nSensorID,hTargetObject,nTargetSensorID)
 
 
+
 log.warning("touch")
+
+if(nTargetSensorID==66)
+then
+object.sendEvent(hTargetObject,"AI_ENEMY","onDamageManager",this.nShockDamage())
+end
+
+
 
 
 end
+

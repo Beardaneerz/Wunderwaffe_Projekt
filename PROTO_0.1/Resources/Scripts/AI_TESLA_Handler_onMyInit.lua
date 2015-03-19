@@ -10,6 +10,12 @@ function AI_TESLA.onMyInit ( hParent , nTSpeed )
 	
 	this.hPlane ( hParent )
     this.nSpeed ( nTSpeed )
+    
+    for i=0,3
+    do
+        table.add ( this.tCoordTarget ( ),0)
+    end
+    
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

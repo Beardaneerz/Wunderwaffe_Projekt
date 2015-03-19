@@ -12,6 +12,7 @@ if(this.bActive())
 then
 if(this.nScale()>2)
 then
+this.SENSORACTIVE()
 this.nWayFactor(-1)
 this.nIncrement(0.03)
 
@@ -23,7 +24,7 @@ this.bActive(false)
 end
 
 this.nScale(this.nScale()+this.nIncrement()*this.nWayFactor())
-object.setScale(this.getObject(),this.nScale(),this.nScale(),this.nScale())
+object.setScale(object.getChildAt(this.getObject(),0),this.nScale(),this.nScale(),this.nScale())
 end
 
 

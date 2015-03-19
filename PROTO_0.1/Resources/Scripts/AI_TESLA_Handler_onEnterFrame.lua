@@ -8,9 +8,10 @@
 function AI_TESLA.onEnterFrame (  )
 --------------------------------------------------------------------------------
 	
-    local dt = application.getAverageFrameTime ( )
+
+
     
-	object.translate ( this.getObject ( ),this.nSpeed ( )*dt,0,0,object.kLocalSpace )
+	
 	
 --------------------------------------------------------------------------------
 end

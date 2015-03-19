@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_TESLA.Idle_onEnter()
+
+
+this.ToTarget()
+
+
+end

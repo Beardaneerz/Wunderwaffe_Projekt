@@ -11,7 +11,7 @@ function AI_ENNEMY_MANAGER.onInit (  )
 	local hScene = application.getCurrentUserScene ( )
     local hObject = nil
     
-    for i = 0, 14
+    for i = 0, this.nEnemys ( )
     do
         hObject = scene.createRuntimeObject ( hScene, "OBJ_ENNEMY" )
         object.setTranslation ( hObject,2000,2000,-2000,object.kGlobalSpace )
@@ -19,6 +19,7 @@ function AI_ENNEMY_MANAGER.onInit (  )
         
         table.add ( this.tEnnemyBool ( ), false )
         table.add ( this.tEnnemy ( ), hObject )
+        table.add ( this.tTeslaBool ( ),false )
 	end
     
     for i = 0, 250

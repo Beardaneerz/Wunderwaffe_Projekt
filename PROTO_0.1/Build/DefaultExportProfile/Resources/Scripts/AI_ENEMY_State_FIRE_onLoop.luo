@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+function AI_ENEMY.FIRE_onLoop()
+
+
+local dt=application.getLastFrameTime()
+
+this.nTimer(this.nTimer()+dt)
+
+if(this.nTimer()>=this.nCadence())
+then
+this.Pattern1()
+this.nTimer(0)
+end
+
+
+end
+

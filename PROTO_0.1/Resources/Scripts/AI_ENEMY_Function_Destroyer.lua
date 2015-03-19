@@ -10,7 +10,7 @@ function AI_ENEMY.Destroyer ( )
 	
     local hUser = application.getCurrentUser ( )
 
-	if(this.nPV ( ) <0 )
+	if(this.nPV ( ) <=0 )
     then
         user.sendEvent ( hUser,"AI_SCORE","onAddScore",this.nScore ( ) )
         

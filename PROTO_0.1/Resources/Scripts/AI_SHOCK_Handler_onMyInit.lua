@@ -12,7 +12,7 @@ this.hPlane ( hParent)
 
 sensor.setActiveAt ( this.getObject ( ),0,false  )
 
-object.setScale ( this.getObject ( ),0.1,0.1,0.1 )
+object.setScale (  object.getChildAt ( this.getObject ( ),0 ),0.1,0.1,0.1 )
 
 	
 --------------------------------------------------------------------------------

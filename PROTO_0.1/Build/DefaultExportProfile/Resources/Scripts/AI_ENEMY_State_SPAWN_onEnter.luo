@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function AI_ENEMY.SPAWN_onEnter()
+
+
+object.setRotation(this.getObject(),0,90,0,object.kGlobalSpace)
+this.nPV(3)
+this.FIRE()
+
+end
+

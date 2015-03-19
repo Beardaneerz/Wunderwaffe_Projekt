@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+function AI_ENNEMY_MANAGER.onResetTeslaTable()
+
+
+for i=0,this.nEnemys()
+do
+table.setAt(this.tTeslaBool(),i,false)
+end
+
+
+end
