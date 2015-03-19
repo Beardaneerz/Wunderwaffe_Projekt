@@ -18,6 +18,12 @@ function AI_ENEMY.onSensorCollisionBegin ( nSensorID, hTargetObject, nTargetSens
         log.message ( "touched by laser" )
     end
     
+    if ( nTargetSensorID == 12 )
+    then
+        this.bTrajectory ( false )
+        this.nTrajectory ( this.nTrajectory ( ) + 1 )
+    end
+    
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

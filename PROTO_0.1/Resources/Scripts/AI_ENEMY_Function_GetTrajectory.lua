@@ -1,23 +1,22 @@
 --------------------------------------------------------------------------------
---  State............ : SPAWN
+--  Function......... : GetTrajectory
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_ENEMY.SPAWN_onEnter ( )
+function AI_ENEMY.GetTrajectory ( )
 --------------------------------------------------------------------------------
 	
-	object.setRotation ( this.getObject ( ),0,90,0,object.kGlobalSpace )
-    this.nPV ( 3)
-	this.FIRE ( )
+    local nX,nY,nZ = object.getTranslation ( table.getAt ( this.tTrajectory ( ),this.nTrajectory ( ) ),object.kGlobalSpace )
+    local nXx,nYy,nZz = object.getTranslation ( this.getObject ( ),object.kGlobalSpace )
     
-    local nCount = object.getChildCount ( this.hSpawn ( ) )
+    local vX,vY,vZ =  math.vectorNormalize (  nX-nXx, nY-nYy, 0 )
+    this.nTraX ( vX )
+    this.nTraY ( vY)
     
-    for i = 0,nCount-1
-    do
-        table.setAt( this.tTrajectory ( ),i,object.getChildAt ( this.hSpawn ( ),i ) )
-    end
+    this.bTrajectory ( true )
+	
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

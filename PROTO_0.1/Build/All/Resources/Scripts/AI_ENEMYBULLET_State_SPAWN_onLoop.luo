@@ -16,3 +16,4 @@ object.translate(this.getObject(),this.nSpeed()*dt,0,0,object.kLocalSpace)
 
 
 end
+

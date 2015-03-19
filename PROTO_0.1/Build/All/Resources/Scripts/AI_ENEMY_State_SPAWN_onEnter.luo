@@ -12,5 +12,12 @@ object.setRotation(this.getObject(),0,90,0,object.kGlobalSpace)
 this.nPV(3)
 this.FIRE()
 
+local nCount=object.getChildCount(this.hSpawn())
+
+for i=0,nCount-1
+do
+table.setAt(this.tTrajectory(),i,object.getChildAt(this.hSpawn(),i))
+end
+
 end
 

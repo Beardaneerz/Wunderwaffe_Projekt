@@ -9,9 +9,11 @@ function AI_SHOCK.Follow ( )
 --------------------------------------------------------------------------------
 	local hScene = application.getCurrentUserScene ( )
     
-    local pX,pY,pZ = object.getTranslation ( this.hPlane ( ),object.kGlobalSpace )
-    
-    object.setTranslation ( this.getObject ( ), pX,pY,pZ,object.kGlobalSpace )
+    if ( this.hPlane ( ))
+    then
+        local pX,pY,pZ = object.getTranslation ( this.hPlane ( ),object.kGlobalSpace )
+        object.setTranslation ( this.getObject ( ), pX,pY,pZ,object.kGlobalSpace )
+    end
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

@@ -28,8 +28,6 @@ x,y,z=camera.unprojectPoint(this.hCam(),-1,-1,targetZ)
 local xMin=x
 local yMax=y
 
-
-
 if(nX<xMin or nX>xMax)
 then
 
@@ -40,3 +38,4 @@ end
 
 
 end
+

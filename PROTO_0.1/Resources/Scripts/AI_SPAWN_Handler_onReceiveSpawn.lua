@@ -14,7 +14,7 @@ function AI_SPAWN.onReceiveSpawn ( hTemp )
         local nX,nY,nZ = object.getTranslation ( this.getObject ( ),object.kGlobalSpace )
         object.setTranslation ( this.hEnnemy ( ),nX,nY,nZ,object.kGlobalSpace )
     
-        object.sendEvent ( this.hEnnemy ( ),"AI_ENEMY","onChangeState" )
+        object.sendEvent ( this.hEnnemy ( ),"AI_ENEMY","onMyInit",this.getObject ( ),20,1,5,1,15,100 )
     
     end
 	

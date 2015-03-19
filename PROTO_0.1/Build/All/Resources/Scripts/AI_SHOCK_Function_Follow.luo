@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+function AI_SHOCK.Follow()
+
+local hScene=application.getCurrentUserScene()
+
+if(this.hPlane())
+then
+local pX,pY,pZ=object.getTranslation(this.hPlane(),object.kGlobalSpace)
+object.setTranslation(this.getObject(),pX,pY,pZ,object.kGlobalSpace)
+end
+
+end
+

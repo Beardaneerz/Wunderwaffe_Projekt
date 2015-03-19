@@ -1,13 +1,17 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onChangeState
+--  Handler.......... : onMyInit
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_ENEMY.onChangeState (  )
+function AI_ENEMY.onMyInit (  hTemp, nTCount, nTDelay, nTSpeed, nTPattern , nTScore )
 --------------------------------------------------------------------------------
 	
+    this.SetParameters ( nTCount, nTDelay, nTSpeed, nTPattern , nTScore )
+    
+    this.hSpawn ( hTemp )
+    
 	this.SPAWN ( )
 	
 --------------------------------------------------------------------------------

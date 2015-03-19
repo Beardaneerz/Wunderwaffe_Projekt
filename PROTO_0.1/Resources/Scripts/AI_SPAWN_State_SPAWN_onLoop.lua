@@ -28,8 +28,6 @@ function AI_SPAWN.SPAWN_onLoop ( )
         local xMin = x 
         local yMax = y 
 
-
-
         if( nX<xMin or nX>xMax )
         then
 

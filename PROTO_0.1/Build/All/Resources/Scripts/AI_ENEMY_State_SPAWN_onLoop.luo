@@ -11,7 +11,5 @@ function AI_ENEMY.SPAWN_onLoop()
 
 
 
-
-
 end
 

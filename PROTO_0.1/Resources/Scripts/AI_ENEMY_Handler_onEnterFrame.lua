@@ -1,23 +1,25 @@
 --------------------------------------------------------------------------------
---  State............ : SPAWN
+--  Handler.......... : onEnterFrame
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_ENEMY.SPAWN_onEnter ( )
+function AI_ENEMY.onEnterFrame (  )
 --------------------------------------------------------------------------------
 	
-	object.setRotation ( this.getObject ( ),0,90,0,object.kGlobalSpace )
-    this.nPV ( 3)
-	this.FIRE ( )
-    
-    local nCount = object.getChildCount ( this.hSpawn ( ) )
-    
-    for i = 0,nCount-1
-    do
-        table.setAt( this.tTrajectory ( ),i,object.getChildAt ( this.hSpawn ( ),i ) )
+    local dt = application.getLastFrameTime ( )
+    -- GET TRANSLATION OF THE SPAWN
+    if ( table.getAt ( this.tTrajectory ( ),this.nTrajectory ( ) )~=nil)
+    then
+        if ( not this.bTrajectory ( ))
+        then    
+            this.GetTrajectory ( )
+        end
+        
+        object.translate ( this.getObject ( ),(this.nTraX ( )*dt)*2,(this.nTraY ( )*dt)*2,0,object.kGlobalSpace )
     end
+	
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------
