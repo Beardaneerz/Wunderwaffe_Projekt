@@ -8,30 +8,14 @@
 function AI_ENNEMY_MANAGER.onMyInit (  )
 --------------------------------------------------------------------------------
 	
-	local hScene = application.getCurrentUserScene ( )
+    local hUser = application.getCurrentUser ( )
+    local hScene = application.getCurrentUserScene ( )
     local hObject = nil
     
-    for i = 0, this.nEnemys ( )
+    for i=0, this.nDelay ( )
     do
-        hObject = scene.createRuntimeObject ( hScene, "OBJ_ENNEMY" )
-        object.setTranslation ( hObject,2000,2000,-2000,object.kGlobalSpace )
-        object.sendEvent ( hObject,"AI_ENEMY","onSetID",i )
-        
-        table.add ( this.tEnnemyBool ( ), false )
-        table.add ( this.tEnnemy ( ), hObject )
-        table.add ( this.tTeslaBool ( ),false )
-	end
-    
-    for i = 0, 250
-    do
-        hObject = scene.createRuntimeObject ( hScene, "OBJ_E_BULLET" )
-        object.setTranslation ( hObject,2000,2000,-2000,object.kGlobalSpace )
-        
-        object.sendEvent ( hObject,"AI_ENEMYBULLET","onSetID",i )
-        
-        table.add ( this.tBulletBool ( ), false )
-        table.add ( this.tBullet ( ), hObject )
-	end
+        user.postEvent ( hUser,0.2*(i/10),"AI_ENNEMY_MANAGER","onCreateAssets" )
+    end
     
     local nCount = scene.getObjectCount ( hScene )
    

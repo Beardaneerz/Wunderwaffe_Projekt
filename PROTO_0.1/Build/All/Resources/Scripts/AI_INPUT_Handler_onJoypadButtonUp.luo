@@ -78,8 +78,7 @@ end
 else
 if(nButton==12)
 then
-log.warning("START GAME")
-user.sendEvent(hUser,"AI_MAIN","onMyInit")
+user.sendEvent(hUser,"AI_LEVEL","onMyInit")
 end
 end
 
