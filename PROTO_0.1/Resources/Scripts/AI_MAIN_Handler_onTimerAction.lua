@@ -10,10 +10,10 @@ function AI_MAIN.onTimerAction (  )
 	
 	this.nTick ( this.nTick ( ) + 1 )
     
-    if ( this.nTick ( ) > 2 )
+    if ( this.nTick ( ) > 10 )
     then
         this.nTick ( 0 )
-        log.message ( "TEST" )
+        log.warning ( "DEMO_TEST" )
     end
 	
 --------------------------------------------------------------------------------
