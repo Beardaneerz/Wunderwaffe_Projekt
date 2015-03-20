@@ -8,11 +8,12 @@
 function AI_DEBUG.onEnterFrame (  )
 --------------------------------------------------------------------------------
 	
-local dt=application.getLastFrameTime()
-this.nTime(this.nTime()+dt)
-local nFps=math.floor(1/dt)
+    local dt = application.getLastFrameTime()
+    this.nTime( this.nTime()+dt )
+    
+    local nFps = math.floor(1/dt)
 
-hud.setLabelText(hud.getComponent(this.getUser(),"DEBUG.DEBUG"),"FPS : "..this.nTime ( ))
+    hud.setLabelText(hud.getComponent(this.getUser(),"DEBUG.DEBUG"),"TIME : "..this.nTime ( ))
 
 	
 --------------------------------------------------------------------------------

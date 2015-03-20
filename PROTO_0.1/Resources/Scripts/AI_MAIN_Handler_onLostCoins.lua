@@ -10,8 +10,10 @@ function AI_MAIN.onLostCoins (  )
 	
     local hUser = application.getCurrentUser ( )
     
+    -- LOOSE LIFE
     this.nLife ( this.nLife ( ) - 1 )
      
+    -- CHECK DEATH
     if ( this.nLife ( ) <= 0 )
     then
         this.nCoins ( this.nCoins ( ) - 1)

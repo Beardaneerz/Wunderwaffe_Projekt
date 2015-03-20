@@ -10,6 +10,8 @@ function AI_INPUT.onKeyboardKeyUp(kKeyCode)
 
 local hUser=application.getCurrentUser()
 
+if(this.hPlayer())
+then
 
 
 
@@ -74,6 +76,8 @@ else
 user.sendEvent(hUser,"AI_MAIN","onContinue")
 end
 end
+end
 
 
 end
+

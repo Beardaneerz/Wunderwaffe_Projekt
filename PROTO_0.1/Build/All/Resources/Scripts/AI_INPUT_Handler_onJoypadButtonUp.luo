@@ -8,9 +8,10 @@
 function AI_INPUT.onJoypadButtonUp(nJoypad,nButton)
 
 
-
 local hUser=application.getCurrentUser()
 
+if(this.hPlayer())
+then
 
 
 
@@ -72,6 +73,13 @@ then
 user.sendEvent(hUser,"AI_MAIN","onAddCoins")
 else
 user.sendEvent(hUser,"AI_MAIN","onContinue")
+end
+end
+else
+if(nButton==12)
+then
+log.warning("START GAME")
+user.sendEvent(hUser,"AI_MAIN","onMyInit")
 end
 end
 

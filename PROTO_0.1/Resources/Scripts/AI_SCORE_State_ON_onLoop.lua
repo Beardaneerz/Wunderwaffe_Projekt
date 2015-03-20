@@ -8,9 +8,7 @@
 function AI_SCORE.ON_onLoop ( )
 --------------------------------------------------------------------------------
 	
-    local hUser = application.getCurrentUser ( )
-
-	hud.setLabelText ( hud.getComponent ( hUser,"MAIN.SCORE" ),""..this.nScore ( ) )
+    this.ON ( )
 	
 --------------------------------------------------------------------------------
 end

@@ -8,8 +8,11 @@
 function AI_INPUT.onJoypadButtonDown(nJoypad,nButton)
 
 
+local hUser=application.getCurrentUser()
 
 
+if(this.hPlayer())
+then
 
 
 
@@ -43,6 +46,7 @@ then
 log.message("TIR")
 this.bFire(true)
 end
-
+end
 
 end
+

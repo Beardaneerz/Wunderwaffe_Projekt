@@ -8,7 +8,7 @@
 function AI_INPUT.onJoypadStickMove(nJoypad,nStick,nAxisX,nAxisY)
 
 
-if(this.hPlayer()~=nil)
+if(this.hPlayer())
 then
 if(nStick==0)
 then

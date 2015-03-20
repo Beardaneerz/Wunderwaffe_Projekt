@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function AI_MAIN.onDestroyMenu()
+
+
+local hUser=application.getCurrentUser()
+hud.destroyTemplateInstance(hUser,"MENU")
+
+
+end
