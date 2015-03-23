@@ -11,7 +11,8 @@ function AI_MAIN.onInit()
 local hUser=application.getCurrentUser()
 
 
-hud.newTemplateInstance(hUser,"HUD_MENU","MENU")
+
+user.sendEvent(hUser,"AI_MAIN","onMyInit")
 
 
 end

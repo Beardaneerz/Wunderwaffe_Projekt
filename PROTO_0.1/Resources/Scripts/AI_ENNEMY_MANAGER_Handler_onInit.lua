@@ -1,19 +1,15 @@
 --------------------------------------------------------------------------------
 --  Handler.......... : onInit
---  Author........... : Arnaud//Johann
+--  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function AI_MAIN.onInit (  )
+function AI_ENNEMY_MANAGER.onInit (  )
 --------------------------------------------------------------------------------
-    
-    local hUser = application.getCurrentUser ( )
-    
-    -- INIT MENU FOR FIRST PLAYING FOR THIS VERSION NO MENU = BEST PRODUCTIVITY
-    --hud.newTemplateInstance ( hUser,"HUD_MENU","MENU" )
-    user.sendEvent ( hUser,"AI_MAIN","onMyInit" )
 	
+	this.INIT ( )
+    
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

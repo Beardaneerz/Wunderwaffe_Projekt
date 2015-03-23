@@ -8,7 +8,6 @@
 function AI_ENNEMY_MANAGER.onCreateAssets (  )
 --------------------------------------------------------------------------------
 	
-    log.message ( "test" )
 	local hScene = application.getCurrentUserScene ( )
     local hObject = nil
     
