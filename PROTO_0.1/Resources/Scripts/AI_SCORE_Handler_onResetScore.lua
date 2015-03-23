@@ -8,8 +8,12 @@
 function AI_SCORE.onResetScore (  )
 --------------------------------------------------------------------------------
 	
+    local hUser = application.getCurrentUser ( )
+    
+    -- RESET SCORE AND SET LABEL TEXT
 	this.nScore ( 0 )
-	
+	hud.setLabelText ( hud.getComponent ( hUser,"MAIN.SCORE" ),""..this.nScore ( ) )
+    
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

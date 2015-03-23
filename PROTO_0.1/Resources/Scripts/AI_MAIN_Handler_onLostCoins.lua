@@ -19,10 +19,10 @@ function AI_MAIN.onLostCoins (  )
         this.nCoins ( this.nCoins ( ) - 1)
         hud.setLabelText ( hud.getComponent ( hUser,"MAIN.COINS" ),""..this.nCoins ( ) )
         
-        if ( this.nCoins ( ) <= 0 )
+        if ( this.nCoins ( ) <= 0 )-- LOOSE THE GAME
         then
             hud.callAction ( hUser,"MAIN.GAME_OVER_ON" )
-        else
+        else -- CONTINUE
             this.CONTINUE ( )
             hud.callAction ( hUser,"MAIN.CONTINUE_ON" )
             

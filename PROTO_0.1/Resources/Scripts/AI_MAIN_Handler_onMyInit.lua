@@ -42,6 +42,7 @@ function AI_MAIN.onMyInit (  )
     
     -- DESTROY MENU HUD
     hud.callAction ( hUser,"MENU.DESTROY" )
+    hud.setLabelText ( hud.getComponent ( hUser,"MAIN.SCORE" ),"0" )
     
     -- LAUCH GAME
     this.PLAY ( )

@@ -8,8 +8,12 @@
 function AI_SCORE.onAddScore ( nValue )
 --------------------------------------------------------------------------------
 	
+    local hUser = application.getCurrentUser ( )
+
+    -- SET SCORE AND SET LABEL TEXT
 	this.nScore ( this.nScore ( ) + nValue )
-	
+	hud.setLabelText ( hud.getComponent ( hUser,"MAIN.SCORE" ),""..this.nScore ( ) )
+    
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

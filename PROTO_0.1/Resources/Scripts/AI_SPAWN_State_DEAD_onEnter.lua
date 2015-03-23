@@ -8,7 +8,11 @@
 function AI_SPAWN.DEAD_onEnter ( )
 --------------------------------------------------------------------------------
     
-    object.sendEvent ( this.hEnnemy ( ),"AI_ENEMY","onTakeDamage" ) 
+    if (this.hEnnemy ( ))
+    then
+        object.sendEvent ( this.hEnnemy ( ),"AI_ENEMY","onTakeDamage" ) 
+    end
+    
     this.hEnnemy ( nil )
 	
 --------------------------------------------------------------------------------

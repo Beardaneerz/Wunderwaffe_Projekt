@@ -42,6 +42,7 @@ user.sendEvent(hUser,"AI_SCORE","onMyInit")
 
 
 hud.callAction(hUser,"MENU.DESTROY")
+hud.setLabelText(hud.getComponent(hUser,"MAIN.SCORE"),"0")
 
 
 this.PLAY()

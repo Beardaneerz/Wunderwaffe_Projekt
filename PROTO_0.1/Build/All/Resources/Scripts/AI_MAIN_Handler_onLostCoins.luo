@@ -22,7 +22,7 @@ hud.setLabelText(hud.getComponent(hUser,"MAIN.COINS"),""..this.nCoins())
 if(this.nCoins()<=0)
 then
 hud.callAction(hUser,"MAIN.GAME_OVER_ON")
-else
+else 
 this.CONTINUE()
 hud.callAction(hUser,"MAIN.CONTINUE_ON")
 

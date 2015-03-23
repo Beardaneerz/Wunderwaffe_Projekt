@@ -8,9 +8,23 @@
 function AI_PLAYER.INVINCIBLE_onLoop()
 
 
-local dt=application.getLastFrameTime()
 
+local dt=application.getLastFrameTime()
 this.nTimer(this.nTimer()+dt)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 if(this.nTimer()>=1)
 then

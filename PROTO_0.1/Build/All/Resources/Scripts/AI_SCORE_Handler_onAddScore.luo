@@ -8,7 +8,11 @@
 function AI_SCORE.onAddScore(nValue)
 
 
+local hUser=application.getCurrentUser()
+
+
 this.nScore(this.nScore()+nValue)
+hud.setLabelText(hud.getComponent(hUser,"MAIN.SCORE"),""..this.nScore())
 
 
 end
