@@ -8,6 +8,8 @@
 function AI_PLAYER.onEnterFrame (  )
 --------------------------------------------------------------------------------
 	
+    local hUser = application.getCurrentUser ( )
+    
     if ( table.getAt ( this.tRotate ( ),0 ))
     then
         object.rotateTo ( this.getObject ( ),-90,0,0,object.kGlobalSpace,0.01)
@@ -60,6 +62,38 @@ function AI_PLAYER.onEnterFrame (  )
             object.translateTo(this.getObject(),nX,nY+1,nZ,object.kGlobalSpace,0.2)
         end
 	end 
+    
+    if (hud.getComponent ( hUser,"MAIN.Container_Weapon" ))
+    then
+        local hComponent = hud.getComponent ( hUser,"MAIN.Container_Weapon" )
+     
+        --The scene 3D coordinates of the object
+        local sceneX, sceneY, sceneZ = object.getTranslation ( this.getObject ( ), object.kGlobalSpace )
+         
+        --Screen coordinates (-1,1)
+        local hudX, hudY = camera.projectPoint ( this.hCam ( ), sceneX, sceneY, sceneZ )
+         
+        --Convert to HUD coordinates (0,100)
+        hudX = hudX * 50 + 50
+        hudY = hudY * 50 + 51
+         
+        --Place the component
+        hud.setComponentPosition ( hComponent, hudX, hudY )
+    end
+    
+    if ( this.bChange ( ))
+    then
+        local dt = application.getLastFrameTime ( )
+        
+        this.nTimerChange ( this.nTimerChange ( ) + dt )
+        
+        if ( this.nTimerChange ( )>0.5)
+        then
+            this.nTimerChange ( 0 )
+            this.bChange ( false )
+            hud.callAction ( hUser,"MAIN.FADE_OUT" )
+        end
+    end
     
 --------------------------------------------------------------------------------
 end

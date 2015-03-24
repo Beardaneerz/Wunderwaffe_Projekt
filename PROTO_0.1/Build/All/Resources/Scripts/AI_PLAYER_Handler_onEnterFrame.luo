@@ -8,6 +8,8 @@
 function AI_PLAYER.onEnterFrame()
 
 
+local hUser=application.getCurrentUser()
+
 if(table.getAt(this.tRotate(),0))
 then
 object.rotateTo(this.getObject(),-90,0,0,object.kGlobalSpace,0.01)
@@ -58,6 +60,38 @@ object.translateTo(this.getObject(),nX,nY-1,nZ,object.kGlobalSpace,0.2)
 elseif(nY<yMax)
 then
 object.translateTo(this.getObject(),nX,nY+1,nZ,object.kGlobalSpace,0.2)
+end
+end
+
+if(hud.getComponent(hUser,"MAIN.Container_Weapon"))
+then
+local hComponent=hud.getComponent(hUser,"MAIN.Container_Weapon")
+
+
+local sceneX,sceneY,sceneZ=object.getTranslation(this.getObject(),object.kGlobalSpace)
+
+
+local hudX,hudY=camera.projectPoint(this.hCam(),sceneX,sceneY,sceneZ)
+
+
+hudX=hudX*50+50
+hudY=hudY*50+51
+
+
+hud.setComponentPosition(hComponent,hudX,hudY)
+end
+
+if(this.bChange())
+then
+local dt=application.getLastFrameTime()
+
+this.nTimerChange(this.nTimerChange()+dt)
+
+if(this.nTimerChange()>0.5)
+then
+this.nTimerChange(0)
+this.bChange(false)
+hud.callAction(hUser,"MAIN.FADE_OUT")
 end
 end
 

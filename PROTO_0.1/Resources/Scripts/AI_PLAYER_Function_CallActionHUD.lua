@@ -10,42 +10,59 @@ function AI_PLAYER.CallActionHUD ( )
 	
     local hUser = application.getCurrentUser ( )
 
-    for i=0,3
-    do
-        if ( i == this.nActualWeapon ( ))
-        then
-            if ( not hud.isActionRunning ( hUser,"MAIN.SWITCH_"..i ))
-            then
-                hud.callAction ( hUser,"MAIN.SWITCH_"..i)
-                
-                if ( i == 0)
+    hud.callAction ( hUser,"MAIN.FADE_IN" )
+    
+                if ( this.nActualWeapon ( ) == 0)
                 then
-                        hud.setComponentZOrder ( hud.getComponent ( hUser,"MAIN.FIRE_1" ),127 )
-                        hud.setComponentZOrder ( hud.getComponent ( hUser,"MAIN.FIRE_2" ),126 )
-                        hud.setComponentZOrder ( hud.getComponent ( hUser,"MAIN.FIRE_3" ),125 )
-                        hud.setComponentZOrder ( hud.getComponent ( hUser,"MAIN.FIRE_4" ),124 )
-                elseif ( i == 1 )
+                        hud.callAction ( hUser,"MAIN.SWITCH_0",50,80 )
+                        hud.callAction ( hUser,"MAIN.SWITCH_1",25,50 )
+                        hud.callAction ( hUser,"MAIN.SWITCH_2",50,15 )
+                        hud.callAction ( hUser,"MAIN.SWITCH_3",75,50 )
+                        
+                        hud.callAction ( hUser,"MAIN.OPACITY_0",40 )
+                        hud.callAction ( hUser,"MAIN.OPACITY_1",30 )
+                        hud.callAction ( hUser,"MAIN.OPACITY_2",30 )
+                        hud.callAction ( hUser,"MAIN.OPACITY_3",30 )
+                        
+                elseif ( this.nActualWeapon ( ) == 1 )
                 then
-                        hud.setComponentZOrder ( hud.getComponent ( hUser,"MAIN.FIRE_1" ),124 )
-                        hud.setComponentZOrder ( hud.getComponent ( hUser,"MAIN.FIRE_2" ),127 )
-                        hud.setComponentZOrder ( hud.getComponent ( hUser,"MAIN.FIRE_3" ),126 )
-                        hud.setComponentZOrder ( hud.getComponent ( hUser,"MAIN.FIRE_4" ),125 )
-                elseif ( i == 2 )
+                        hud.callAction ( hUser,"MAIN.SWITCH_0",25,50 )
+                        hud.callAction ( hUser,"MAIN.SWITCH_1",50,15 )
+                        hud.callAction ( hUser,"MAIN.SWITCH_2",75,50 )
+                        hud.callAction ( hUser,"MAIN.SWITCH_3",50,80 )
+                        
+                        hud.callAction ( hUser,"MAIN.OPACITY_0",30 )
+                        hud.callAction ( hUser,"MAIN.OPACITY_1",30 )
+                        hud.callAction ( hUser,"MAIN.OPACITY_2",30 )
+                        hud.callAction ( hUser,"MAIN.OPACITY_3",40 )
+                        
+                elseif ( this.nActualWeapon ( ) == 2 )
                 then
-                        hud.setComponentZOrder ( hud.getComponent ( hUser,"MAIN.FIRE_1" ),125 )
-                        hud.setComponentZOrder ( hud.getComponent ( hUser,"MAIN.FIRE_2" ),124 )
-                        hud.setComponentZOrder ( hud.getComponent ( hUser,"MAIN.FIRE_3" ),127 )
-                        hud.setComponentZOrder ( hud.getComponent ( hUser,"MAIN.FIRE_4" ),126 )                 
-                elseif ( i == 3 )
+                        hud.callAction ( hUser,"MAIN.SWITCH_0",50,15 )
+                        hud.callAction ( hUser,"MAIN.SWITCH_1",75,50 )
+                        hud.callAction ( hUser,"MAIN.SWITCH_2",50,80 )
+                        hud.callAction ( hUser,"MAIN.SWITCH_3",25,50 )
+                        
+                        hud.callAction ( hUser,"MAIN.OPACITY_0",30 )
+                        hud.callAction ( hUser,"MAIN.OPACITY_1",30 )
+                        hud.callAction ( hUser,"MAIN.OPACITY_2",40 )
+                        hud.callAction ( hUser,"MAIN.OPACITY_3",30 )
+                        
+                elseif ( this.nActualWeapon ( ) == 3 )
                 then
-                        hud.setComponentZOrder ( hud.getComponent ( hUser,"MAIN.FIRE_1" ),126 )
-                        hud.setComponentZOrder ( hud.getComponent ( hUser,"MAIN.FIRE_2" ),125 )
-                        hud.setComponentZOrder ( hud.getComponent ( hUser,"MAIN.FIRE_3" ),124 )
-                        hud.setComponentZOrder ( hud.getComponent ( hUser,"MAIN.FIRE_4" ),127 ) 
+                        hud.callAction ( hUser,"MAIN.SWITCH_0",75,50 )
+                        hud.callAction ( hUser,"MAIN.SWITCH_1",50,80 )
+                        hud.callAction ( hUser,"MAIN.SWITCH_2",25,50 )
+                        hud.callAction ( hUser,"MAIN.SWITCH_3",50,15 )
+                        
+                        hud.callAction ( hUser,"MAIN.OPACITY_0",30 )
+                        hud.callAction ( hUser,"MAIN.OPACITY_1",40 )
+                        hud.callAction ( hUser,"MAIN.OPACITY_2",30 )
+                        hud.callAction ( hUser,"MAIN.OPACITY_3",30 )
                 end
-            end
-        end
-    end
+        
+        this.nTimerChange ( 0 )
+        this.bChange ( true )
     
 	
 --------------------------------------------------------------------------------
