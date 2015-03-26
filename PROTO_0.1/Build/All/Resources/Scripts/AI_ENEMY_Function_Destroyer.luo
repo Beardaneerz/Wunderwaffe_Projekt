@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+function AI_ENEMY.Destroyer()
+
+
+local hUser=application.getCurrentUser()
+
+if(this.nPV()<=0)
+then
+this.HIT()
+end
+
+
+
+end
+

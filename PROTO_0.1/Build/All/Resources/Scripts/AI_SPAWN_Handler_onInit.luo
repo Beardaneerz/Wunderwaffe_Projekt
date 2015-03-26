@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+function AI_SPAWN.onInit()
+
+
+local nCount=object.getChildCount(this.getObject())
+
+for i=0,nCount-1
+do
+table.add(this.tTrajectoire(),object.getChildAt(this.getObject(),i))
+end
+
+
+end

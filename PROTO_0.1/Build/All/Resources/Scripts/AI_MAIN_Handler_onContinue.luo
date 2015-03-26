@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_MAIN.onContinue()
+
+
+this.PLAY()
+
+
+end

@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_BULLET.onChangeState()
+
+
+this.SPAWN()
+
+
+end

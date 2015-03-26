@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+function AI_SPAWN.IDLE_onEnter()
+
+
+local hScene=application.getCurrentUserScene()
+
+
+this.hCam(scene.getTaggedObject(hScene,"CAM"))
+
+
+end

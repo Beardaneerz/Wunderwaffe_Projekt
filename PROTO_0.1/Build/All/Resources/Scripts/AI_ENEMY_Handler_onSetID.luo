@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function AI_ENEMY.onSetID(nID)
+
+
+this.nIndex(nID)
+
+
+end
+

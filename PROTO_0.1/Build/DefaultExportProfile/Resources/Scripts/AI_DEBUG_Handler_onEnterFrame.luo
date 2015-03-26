@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+function AI_DEBUG.onEnterFrame()
+
+
+
+
+local dt=application.getLastFrameTime()
+
+local Fps=1/dt
+hud.setLabelText(hud.getComponent(this.getUser(),"DEBUG.DEBUG"),"FPS : "..Fps)
+
+
+end
+

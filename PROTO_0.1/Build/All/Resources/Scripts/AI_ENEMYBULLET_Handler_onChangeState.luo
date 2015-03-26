@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_ENEMYBULLET.onChangeState()
+
+
+this.SPAWN()
+
+
+end

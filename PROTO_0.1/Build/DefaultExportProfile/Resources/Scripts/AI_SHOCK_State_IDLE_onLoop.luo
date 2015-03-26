@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+function AI_SHOCK.IDLE_onLoop()
+
+
+this.nCounter(this.nCounter()+application.getLastFrameTime())
+if(this.nCounter()>=0.2)
+then
+sensor.setActiveAt(this.getObject(),0,false)
+end
+
+
+end

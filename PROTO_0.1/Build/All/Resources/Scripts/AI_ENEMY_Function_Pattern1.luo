@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+
+
+
+
+
+function AI_ENEMY.Pattern1()
+
+
+local hUser=application.getCurrentUser()
+
+for i=0,this.nBulletsCount()
+do
+
+user.sendEvent(hUser,"AI_ENNEMY_MANAGER","onLoadBullet",this.getObject(),i)
+
+end
+
+
+end
+

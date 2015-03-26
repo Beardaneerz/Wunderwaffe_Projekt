@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function AI_SHOCK.SENSORACTIVE_onEnter()
+
+
+sensor.setActiveAt(this.getObject(),0,true)
+this.IDLE()
+
+
+
+end

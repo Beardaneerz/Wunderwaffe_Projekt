@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+function AI_SPAWN.onMyInit(tEnnemy)
+
+
+local nCount=table.getSize(tEnnemy)
+
+for i=0,nCount
+do
+table.add(this.tListEnnemy(),table.getAt(tEnnemy,i))
+end
+
+
+end

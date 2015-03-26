@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+function AI_BULLET.SPAWN_onLoop()
+
+
+local dt=application.getAverageFrameTime()
+
+object.translate(this.getObject(),this.nSpeed()*dt,0,0,object.kGlobalSpace)
+
+this.Delete()
+
+
+end

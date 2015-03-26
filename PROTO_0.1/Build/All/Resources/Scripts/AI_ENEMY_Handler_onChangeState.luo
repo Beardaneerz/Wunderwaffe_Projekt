@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function AI_ENEMY.onChangeState(hTemp)
+
+
+this.hSpawn(hTemp)
+this.SPAWN()
+
+
+end
+

@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_LASER.onMyInit(hParent)
+
+this.hParentPlane(hParent)
+this.Follow()
+
+
+end

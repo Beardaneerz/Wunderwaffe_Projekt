@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function AI_PLAYER.FIRE_onLeave()
+
+
+this.nTimer(0)
+sound.stop(this.getObject(),1)
+
+
+end
+

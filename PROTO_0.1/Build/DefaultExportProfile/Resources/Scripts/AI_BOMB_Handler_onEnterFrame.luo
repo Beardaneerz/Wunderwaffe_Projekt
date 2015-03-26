@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_BOMB.onEnterFrame()
+
+
+this.Grow()
+
+
+end

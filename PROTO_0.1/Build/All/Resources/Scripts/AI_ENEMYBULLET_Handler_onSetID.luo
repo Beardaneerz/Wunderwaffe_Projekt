@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_ENEMYBULLET.onSetID(nID)
+
+
+this.nIndex(nID)
+
+
+end

@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+function AI_LEVEL.onMyInit()
+
+
+local hUser=application.getCurrentUser()
+
+
+hud.newTemplateInstance(hUser,"HUD_MAP","MAP")
+hud.callAction(hUser,"MAP.SCALE_1")
+
+this.bMap(true)
+
+end

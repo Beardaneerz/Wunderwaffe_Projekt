@@ -1,0 +1,22 @@
+
+
+
+
+
+
+
+function AI_MAIN.CONTINUE_onLeave()
+
+
+local hUser=application.getCurrentUser()
+
+if(this.nTimer()<=0)
+then
+hud.callAction(hUser,"MAIN.GAME_OVER_ON")
+else
+hud.callAction(hUser,"MAIN.CONTINUE_OFF")
+this.nLife(3)
+end
+
+end
+

@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function AI_ENEMY.HITBYLASER_onLeave()
+
+
+this.nTimer(0)
+
+
+end
