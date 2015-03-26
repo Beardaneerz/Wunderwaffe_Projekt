@@ -34,7 +34,15 @@ function AI_ENNEMY_MANAGER.onMyInit (  )
             end
         end
     end
-	
+    
+    local hParent = scene.getTaggedObject ( hScene,"BULLET_POOL" )
+    nCount = object.getChildCount ( hParent )
+    
+    for i = 0, nCount-1
+    do
+        hObject = object.getChildAt ( hParent, i )
+        table.add ( this.tBullet ( ), hObject )
+	end
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

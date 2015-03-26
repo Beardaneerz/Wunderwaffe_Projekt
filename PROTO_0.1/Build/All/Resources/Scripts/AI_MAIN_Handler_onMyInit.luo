@@ -11,7 +11,7 @@ function AI_MAIN.onMyInit()
 local hUser=application.getCurrentUser()
 
 
-user.setScene(hUser,"LVL_PROTOTYPE")
+user.setScene(hUser,"LVL_1")
 
 
 this.InitSpawn()

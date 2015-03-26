@@ -10,8 +10,8 @@ function AI_ENEMY.onSensorCollisionBegin ( nSensorID, hTargetObject, nTargetSens
 	
 	if(nTargetSensorID == 67)
     then 
-        this.nPV ( this.nPV ( ) -1)
-        this.Destroyer (  )
+        this.HIT ( )
+
     elseif(nTargetSensorID == 68)
     then
         this.HITBYLASER ( )

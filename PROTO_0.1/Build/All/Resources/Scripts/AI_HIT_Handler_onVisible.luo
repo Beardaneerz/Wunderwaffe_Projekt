@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+function AI_HIT.onVisible(hObject,bVisible)
+
+
+if(bVisible)
+then
+object.setVisible(hObject,true)
+else
+object.setVisible(hObject,false)
+end
+
+end

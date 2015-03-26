@@ -14,7 +14,7 @@ function AI_LASER.Follow (  )
     
     local pX,pY,pZ = object.getTranslation ( this.hParentPlane ( ),object.kGlobalSpace)
     
-    object.setTranslation ( this.getObject ( ),pX,pY,pZ,object.kGlobalSpace )
+    object.setTranslation ( this.getObject ( ),pX+1,pY,pZ,object.kGlobalSpace )
 	
 --------------------------------------------------------------------------------
 end

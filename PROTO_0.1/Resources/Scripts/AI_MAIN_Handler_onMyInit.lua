@@ -11,7 +11,7 @@ function AI_MAIN.onMyInit (  )
     local hUser = application.getCurrentUser ( )
     
     -- LOAD LVL_PROTOTYPE TO TEST MODULE OF THE GAME
-    user.setScene ( hUser,"LVL_PROTOTYPE" )
+    user.setScene ( hUser,"LVL_1" )
     
     -- CHANGE SPAWN LEVEL TAG
     this.InitSpawn ( )

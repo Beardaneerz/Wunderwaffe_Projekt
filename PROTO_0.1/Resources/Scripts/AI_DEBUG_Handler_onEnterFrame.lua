@@ -13,7 +13,7 @@ function AI_DEBUG.onEnterFrame (  )
     
     local nFps = math.floor(1/dt)
 
-    hud.setLabelText(hud.getComponent(this.getUser(),"DEBUG.DEBUG"),"TIME : "..this.nTime ( ))
+    hud.setLabelText(hud.getComponent(this.getUser(),"DEBUG.DEBUG"),"TIME : "..nFps)
 
 	
 --------------------------------------------------------------------------------

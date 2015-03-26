@@ -13,6 +13,7 @@ this.nCadence(nDelay)
 this.nSpeed(nBSpeed)
 this.nPatternType(nPattern)
 this.nScore(nTScore)
+this.nPV(100)
 
 
 end

@@ -10,8 +10,8 @@ function AI_ENEMY.onDamageManager ( nDmg )
 	
 
     
-        this.nPV ( this.nPV ( ) - nDmg)
-        this.Destroyer ( )
+        this.nPV ( this.nPV ( ) - nDmg )
+        this.HIT ( )
 
 --------------------------------------------------------------------------------
 end

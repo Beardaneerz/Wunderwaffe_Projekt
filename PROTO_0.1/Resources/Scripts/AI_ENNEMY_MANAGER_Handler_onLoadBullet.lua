@@ -7,27 +7,16 @@
 --------------------------------------------------------------------------------
 function AI_ENNEMY_MANAGER.onLoadBullet ( hObject, nAngle )
 --------------------------------------------------------------------------------
-	
-    local nCount =  table.getSize ( this.tBullet ( ))
-    local hTarget = nil
-    local hSendObject = nil
-    
-    local nIndex = 0
-    
-    for i = 0, nCount-1
-    do
 
-        hTarget = table.getAt ( this.tBullet( ),i )
-
-        if ( not table.getAt ( this.tBulletBool ( ),i ))
-        then
-            hSendObject = hTarget
-            nIndex = i
-        end
+    local hTarget = table.getAt ( this.tBullet( ),this.nIndexBullet ( ) )
+    this.nIndexBullet ( this.nIndexBullet ( ) + 1 )
+    
+    if ( this.nIndexBullet ( ) > this.nFire ( ) )
+    then
+        this.nIndexBullet ( 0 )
     end
     
-    table.setAt ( this.tBulletBool ( ),nIndex,true )
-    object.sendEvent ( hObject ,"AI_ENEMY","onCreateBullet",hSendObject, nAngle )
+    object.sendEvent ( hObject ,"AI_ENEMY","onCreateBullet",hTarget, nAngle )
 
 --------------------------------------------------------------------------------
 end

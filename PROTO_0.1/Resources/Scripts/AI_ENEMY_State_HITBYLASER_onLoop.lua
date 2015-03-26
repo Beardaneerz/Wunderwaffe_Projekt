@@ -16,10 +16,8 @@ function AI_ENEMY.HITBYLASER_onLoop ( )
     if(this.nTimer ( ) >= 0.25)
     then 
         this.nTimer ( 0)
-        log.message ( "Hitted" )
         log.message ( this.nPV ( ))
         this.nPV ( this.nPV ( )-0.5)
-        this.Destroyer ( )
     end
     
 --------------------------------------------------------------------------------

@@ -10,9 +10,8 @@ function AI_LASER.onStop (  )
 	local hScene = application.getCurrentUserScene ( )
     this.bFollow ( false )
     
+    object.setVisible( object.getChildAt ( this.hParentPlane ( ),4 ),false )
 	scene.destroyRuntimeObject ( hScene, this.getObject ( ) )
-    
-    
 	
 --------------------------------------------------------------------------------
 end

@@ -13,6 +13,7 @@ function AI_ENEMY.SetParameters ( nBCount, nDelay , nBSpeed, nPattern, nTScore )
     this.nSpeed ( nBSpeed )
     this.nPatternType ( nPattern )
     this.nScore ( nTScore )
+    this.nPV ( 100 )
 	
 --------------------------------------------------------------------------------
 end

@@ -17,6 +17,9 @@ function AI_PLAYER.onInit (  )
     this.ON ( )
     this.InitShield ( )
     
+    object.setVisible ( object.getChildAt ( this.getObject ( ),0 ),false )
+    object.setVisible ( object.getChildAt ( this.getObject ( ),4 ),false )
+    
     for i = 0, 2
     do
         table.add ( this.tRotate ( ), false )
